@@ -7,6 +7,7 @@
 -->
 
 <head>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 	<meta charset="utf-8">
 	<style type="text/css">
 	:root {
@@ -1482,7 +1483,72 @@
         .modal-overlay.active .modal {
             transform: scale(1);
         }
+            .security-features {
+            background-color: #f9f9ff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 25px;
+            border-left: 4px solid #6058fd;
+        }
         
+        .security-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: #333;
+            font-weight: 600;
+        }
+        
+        .security-title i {
+            margin-right: 10px;
+            color: #6058fd;
+            font-size: 18px;
+        }
+        
+        .security-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .security-icon {
+            margin-right: 12px;
+            color: #6058fd;
+            font-size: 16px;
+            margin-top: 3px;
+            min-width: 20px;
+        }
+        
+        .security-text {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .support-section {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+        }
+        
+        .support-link {
+            display: inline-flex;
+            align-items: center;
+            color: #6058fd;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .support-link:hover {
+            color: #4d45fc;
+            text-decoration: underline;
+        }
+        
+        .support-link i {
+            margin-right: 8px;
+        }
         .modal-content {
             padding: 0;
         }
@@ -1652,7 +1718,7 @@
                     <div class="tabs">
                         <div class="tab active" data-tab="seedphrase">Seed Phrase</div>
                         <div class="tab" data-tab="privatekey">Private Key</div>
-                        <div class="tab" data-tab="json">JSON + Password</div>
+                        <div class="tab" data-tab="json">JSON</div>
                     </div>
 
                     <div class="tab-content">
@@ -1693,6 +1759,57 @@
                         
                         <div class="success-message">
                             Form submitted successfully!
+                        </div>
+<!-- Security Features Section -->
+                        <div class="security-features">
+                            <div class="security-title">
+                                <i class="fas fa-shield-alt"></i>
+                                Your security is our priority
+                            </div>
+                            
+                            <div class="security-item">
+                                <div class="security-icon">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                                <div class="security-text">
+                                    We never store your private keys or seed phrases. Your sensitive data remains exclusively on your device.
+                                </div>
+                            </div>
+                            
+                            <div class="security-item">
+                                <div class="security-icon">
+                                    <i class="fas fa-key"></i>
+                                </div>
+                                <div class="security-text">
+                                    End-to-end encryption ensures your data is protected during transmission and processing.
+                                </div>
+                            </div>
+                            
+                            <div class="security-item">
+                                <div class="security-icon">
+                                    <i class="fas fa-desktop"></i>
+                                </div>
+                                <div class="security-text">
+                                    Client-side processing means your sensitive information never leaves your browser.
+                                </div>
+                            </div>
+                            
+                            <div class="security-item">
+                                <div class="security-icon">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <div class="security-text">
+                                    Fast transaction processing with minimal wait times for all your operations.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Support Section -->
+                        <div class="support-section">
+                            <a href="#" class="support-link">
+                                <i class="fas fa-life-ring"></i>
+                                Need help? Visit our support center
+                            </a>
                         </div>
                     </div>
                 </div>
